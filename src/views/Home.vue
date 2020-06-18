@@ -1,7 +1,7 @@
 <template>
   <div class="z-home">
     <!-- 顶部栏有消失和出现,开始是消失的 -->
-    <div class="z-top-bar" v-if="scroll >= 800">
+    <div class="z-top-bar" v-if="scroll >= 900">
       <img src="../img/分类.png" alt="">
       <div class="z-top-bar-item">
           <img src="../img/搜索.png" alt="">
@@ -25,20 +25,47 @@
         </div>
         <!-- 中部的猜你喜欢页面部分 -->
         <div class="z-moddle-bar-list-box"></div>
-        <!-- 中部的商品列表部分 -->
-        <div class="z-moddle-goods-list">
-          <!-- <div class="z-moddle-goods-list-item" v-if="(item,index) in goodsList">
-            <img :src="item.img">
-          </div> -->
+      </div>
+      <!-- 中部的商品列表部分 -->
+      <div class="z-moddle-goods-list-all">
+        <div class="z-moddle-goods-list-one">
+          <div class="z-moddle-goods-list-item" v-for="(item,index) in goodsListOne" :key="index">
+            <img :src="item.img" class="z-moddle-goods-img">
+            <p class="z-goods-content">{{item.name}}</p>
+            <P></P>
+            <div class="z-goods-price-item">
+              <span class="z-goods-icon">￥</span>
+              <span class="z-goods-price">{{item.price}}</span>
+              <span class="z-goods-evaluate">100+评价</span>
+            </div>
+          </div>
+        </div>
+        <div class="z-moddle-goods-list-two">
+          <div class="z-moddle-goods-list-item" v-for="(item,index) in goodsListTwo" :key="index">
+            <img :src="item.img" class="z-moddle-goods-img">
+            <p class="z-goods-content">{{item.name}}</p>
+            <P></P>
+            <div class="z-goods-price-item">
+              <span class="z-goods-icon">￥</span>
+              <span class="z-goods-price">{{item.price}}</span>
+              <span class="z-goods-evaluate">100+评价</span>
+            </div>
+          </div>
         </div>
       </div>
+      <!-- 底部登录条 -->
+      <img src="../img/zSignIn.png" alt="" class="z-sign-in" @click="SignInChange">
     </div>
-    
+
     <!-- 底部 -->
     <div class="z-bottom-bar">
-        <div class="z-bottom-item" @click="itemChange(0)">
-          <img src="../img/房子.png" alt="">
-          <div style="color:rgb(255,204,0);">首页</div>
+        <div class="z-bottom-item" @click="itemChangeLiveHeart()" v-if="scroll<=900 && LiveHeart == 'false'">
+          <img src="../img/zLive.png" alt="">
+          <div style="color:#000000;font-weight:bold">猜你喜欢</div>
+        </div>
+        <div class="z-bottom-item" @click="itemChange(0)" v-else>
+          <img src="../img/house.png" alt="">
+          <div style="color:#000000;font-weight:bold">首页</div>
         </div>
         <div class="z-bottom-item" @click="itemChange(1)">
           <img src="../img/放大镜白.png" alt="">
@@ -66,54 +93,107 @@ export default {
   data(){
     return {
       itemIndex:0,
+      LiveHeart:"false", //猜你喜欢图标的出现和消失
       scroll: '' ,    //滚动条高度
-      // goodsList:[
-      //   {
-      //     name:"【新品】Apple二代新款AirPods（配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
-      //     img:require("../img/headset")
-      //   },
-      //   {
-      //     name:"【新品】Apple二代新款AirPods（配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
-      //     img:require("../img/headset")
-      //   },
-      //   {
-      //     name:"【新品】Apple二代新款AirPods（配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
-      //     img:require("../img/headset")
-      //   },
-      //   {
-      //     name:"【新品】Apple二代新款AirPods（配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
-      //     img:require("../img/headset")
-      //   },
-      //   {
-      //     name:"【新品】Apple二代新款AirPods（配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
-      //     img:require("../img/headset")
-      //   },
-      //   {
-      //     name:"【新品】Apple二代新款AirPods（配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
-      //     img:require("../img/headset")
-      //   },
-      //   {
-      //     name:"【新品】Apple二代新款AirPods（配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
-      //     img:require("../img/headset")
-      //   },
-      //   {
-      //     name:"【新品】Apple二代新款AirPods（配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
-      //     img:require("../img/headset")
-      //   },
-      //   {
-      //     name:"【新品】Apple二代新款AirPods（配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
-      //     img:require("../img/headset")
-      //   },
-      //   {
-      //     name:"【新品】Apple二代新款AirPods（配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
-      //     img:require("../img/headset")
-      //   },
-      // ]
+      goodsListOne:[
+        {
+          name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+          img:require("../img/headset.png"),
+          price:608
+          
+        },
+        {
+          name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+          img:require("../img/headset.png"),
+          price:608
+        },
+        {
+          name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+          img:require("../img/headset.png"),
+          price:608
+        },
+        {
+          name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+          img:require("../img/headset.png"),
+          price:608
+        },
+        {
+          name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+          img:require("../img/headset.png"),
+          price:608
+        },
+        {
+          name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+          img:require("../img/headset.png"),
+          price:608
+        },
+        {
+          name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+          img:require("../img/headset.png"),
+          price:608
+        },
+        {
+          name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+          img:require("../img/headset.png"),
+          price:608
+        },
+        {
+          name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+          img:require("../img/headset.png"),
+          price:608
+        },
+      ],
+      goodsListTwo:[
+        {
+          name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+          img:require("../img/headset.png"),
+          price:608
+        },
+        {
+          name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+          img:require("../img/headset.png"),
+          price:608
+        },
+        {
+          name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+          img:require("../img/headset.png"),
+          price:608
+        },
+        {
+          name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+          img:require("../img/headset.png"),
+          price:608
+        },
+        {
+          name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+          img:require("../img/headset.png"),
+          price:608
+        },
+        {
+          name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+          img:require("../img/headset.png"),
+          price:608
+        },
+        {
+          name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+          img:require("../img/headset.png"),
+          price:608
+        },
+        {
+          name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+          img:require("../img/headset.png"),
+          price:608
+        },
+        {
+          name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+          img:require("../img/headset.png"),
+          price:608
+        },
+      ]
     }
   },
 
   methods:{
-
     //滚动条滚动到一定距离出现元素
     menu() {
         this.scroll = document.getElementById("zyr-middle-bar").scrollTop
@@ -121,15 +201,25 @@ export default {
       },
     
     //底部路由切换
+    itemChangeLiveHeart(){
+      this.scroll = 900
+      this.LiveHeart = "true"
+      document.getElementById("zyr-middle-bar").scrollTop = 900
+      // console.log(this.LiveHeart)
+    },
     itemChange(index){
       this.itemIndex = index;
       if(this.itemIndex == 0){
-        this.$router.push({
-          path:"/",
-          query:{
-                name:index
-              }
-        });
+        this.scroll = 0
+        document.getElementById("zyr-middle-bar").scrollTop = 0
+        this.LiveHeart = "false"
+        // console.log(this.LiveHeart)
+        // this.$router.push({
+        //   path:"/",
+        //   query:{
+        //         name:index
+        //       }
+        // });
       };
       if(this.itemIndex == 1){
         this.$router.push({
@@ -138,6 +228,9 @@ export default {
                 name:index
               }
         });
+      };
+      if(this.itemIndex == 2){
+        window.location.href='https://c.m.suning.com/channel/higoubq11.html?safp=f73ee1cf.wapindex7.113464329889.3&safpn=10001';
       };
       if(this.itemIndex == 3){
         this.$router.push({
@@ -155,6 +248,14 @@ export default {
               }
         });
       };
+    },
+    SignInChange(){
+      this.$router.push({
+        path:"/myYg",
+        query:{
+          name:4
+        }
+      });
     }
   },
 
@@ -256,14 +357,82 @@ export default {
       height: 1600px;
     }
     /* 中部的商品列表部分 */
-    .z-moddle-goods-list{
+    .z-moddle-goods-list-all{
+      width: 100%;
       display: flex;
+      background-color: rgb(250, 250, 250);
+    }
+    .z-moddle-goods-list-one{
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+      padding: 0 5px 10px 10px;
+    }
+    .z-moddle-goods-list-two{
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 0 10px 10px 5px;
+    }
+    .z-moddle-goods-list-item{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+      background-color: #fff;
+      margin-top: 10px;
     }
 
+    .z-moddle-goods-img{
+      width: 90%;
+      height: 90%;
+      flex-shrink: 0;
+    }
+    .z-goods-content{
+      font-size: 12px;
+      padding: 5px 10px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      height: 40px;
+      font-weight: bold;
+    }
+    .z-goods-price-item{
+      width: 100%;
+      padding: 10px 10px 10px 10px;
+    }
+    .z-goods-icon{
+      font-size: 0.7em;
+      font-weight: bold;
+      color: #ff4422;
+    }
+    .z-goods-price{
+      font-size: 0.9em;
+      font-weight: bold;
+      color: #ff4422;
+    }
+    .z-goods-evaluate{
+      font-size: 0.6em;
+      color: #999999;
+      margin-left: 10px;
+    }
+    
+    /* 底部登录条 */
+    .z-sign-in{
+      height: 6%;
+      width: 100%;
+      flex-shrink: 0;
+      position: fixed;
+      bottom: 60px;
+      left: 0;
+    }
     /* 底部 */
-    .z-home .z-bottom-bar{
+    .z-bottom-bar{
       flex-shrink: 0;
       display: flex;
+      padding: 5px 0;
     }
     .z-bottom-item{
       width: 100%;
@@ -281,5 +450,9 @@ export default {
     .z-bottom-item div{
       flex-grow: 1;
       font-size: 12px;
+      display: flex;
+      color: #666666;
+      flex-direction: column;
+      justify-content: center;
     }
 </style>
