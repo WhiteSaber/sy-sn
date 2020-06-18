@@ -45,7 +45,9 @@
                     <div class="s-item-title">
                         <span>热门推荐</span>
                     </div>
-                    <ul class="s-item-list"></ul>
+                    <ul class="s-item-list">
+                        <li v-for="item in itemList" :key="item.name"></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -86,7 +88,7 @@ export default {
         [
             {
               name:"手机",
-              src:"../assets/s-手机.png"
+              src:"../assets/s-手机.png",
             },
         ]
     };
