@@ -1,12 +1,18 @@
 <template>
   <div class="z-home">
-    <div class="z-top-bar">
+    <!-- 顶部栏有消失和出现,开始是消失的 -->
+    <div class="z-top-bar" v-if="scroll >= 800">
       <img src="../img/分类.png" alt="">
-      <div></div>
+      <div class="z-top-bar-item">
+          <img src="../img/搜索.png" alt="">
+          <div>爆款好货5折开抢</div>
+      </div>
       <img src="../img/登录.png" alt="">
     </div>
-
-    <div class="z-middle-bar">
+    
+    <!-- 中部 -->
+    <div class="z-middle-bar" id="zyr-middle-bar">
+      <!-- 中部的顶部搜索栏 -->
       <div class="z-moddle-bar-list">
         <div class="z-middle-bar-list-item">
           <img src="../img/分类.png" alt="">
@@ -17,9 +23,18 @@
           <img src="../img/搜索.png" alt="">
           <div>爆款好货5折开抢</div>
         </div>
+        <!-- 中部的猜你喜欢页面部分 -->
+        <div class="z-moddle-bar-list-box"></div>
+        <!-- 中部的商品列表部分 -->
+        <div class="z-moddle-goods-list">
+          <!-- <div class="z-moddle-goods-list-item" v-if="(item,index) in goodsList">
+            <img :src="item.img">
+          </div> -->
+        </div>
       </div>
     </div>
-
+    
+    <!-- 底部 -->
     <div class="z-bottom-bar">
         <div class="z-bottom-item" @click="itemChange(0)">
           <img src="../img/房子.png" alt="">
@@ -48,48 +63,104 @@
 <script>
 
 export default {
-    data(){
-      return {itemIndex:0,
-      }
-      
-    },
-    methods:{
-      itemChange(index){
-        this.itemIndex = index;
-        if(this.itemIndex == 0){
-          this.$router.push({
-            path:"/",
-            query:{
-                  name:index
-                }
-          });
-        };
-        if(this.itemIndex == 1){
-          this.$router.push({
-            path:"/sort",
-            query:{
-                  name:index
-                }
-          });
-        };
-        if(this.itemIndex == 3){
-          this.$router.push({
-            path:"/shoppingCart",
-            query:{
-                  name:index
-                }
-          });
-        };
-        if(this.itemIndex == 4){
-          this.$router.push({
-            path:"/myYg",
-            query:{
-                  name:index
-                }
-          });
-        };
-      }
+  data(){
+    return {
+      itemIndex:0,
+      scroll: '' ,    //滚动条高度
+      // goodsList:[
+      //   {
+      //     name:"【新品】Apple二代新款AirPods（配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+      //     img:require("../img/headset")
+      //   },
+      //   {
+      //     name:"【新品】Apple二代新款AirPods（配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+      //     img:require("../img/headset")
+      //   },
+      //   {
+      //     name:"【新品】Apple二代新款AirPods（配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+      //     img:require("../img/headset")
+      //   },
+      //   {
+      //     name:"【新品】Apple二代新款AirPods（配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+      //     img:require("../img/headset")
+      //   },
+      //   {
+      //     name:"【新品】Apple二代新款AirPods（配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+      //     img:require("../img/headset")
+      //   },
+      //   {
+      //     name:"【新品】Apple二代新款AirPods（配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+      //     img:require("../img/headset")
+      //   },
+      //   {
+      //     name:"【新品】Apple二代新款AirPods（配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+      //     img:require("../img/headset")
+      //   },
+      //   {
+      //     name:"【新品】Apple二代新款AirPods（配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+      //     img:require("../img/headset")
+      //   },
+      //   {
+      //     name:"【新品】Apple二代新款AirPods（配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+      //     img:require("../img/headset")
+      //   },
+      //   {
+      //     name:"【新品】Apple二代新款AirPods（配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+      //     img:require("../img/headset")
+      //   },
+      // ]
     }
+  },
+
+  methods:{
+
+    //滚动条滚动到一定距离出现元素
+    menu() {
+        this.scroll = document.getElementById("zyr-middle-bar").scrollTop
+        // console.log(this.scroll)
+      },
+    
+    //底部路由切换
+    itemChange(index){
+      this.itemIndex = index;
+      if(this.itemIndex == 0){
+        this.$router.push({
+          path:"/",
+          query:{
+                name:index
+              }
+        });
+      };
+      if(this.itemIndex == 1){
+        this.$router.push({
+          path:"/sort",
+          query:{
+                name:index
+              }
+        });
+      };
+      if(this.itemIndex == 3){
+        this.$router.push({
+          path:"/shoppingCart",
+          query:{
+                name:index
+              }
+        });
+      };
+      if(this.itemIndex == 4){
+        this.$router.push({
+          path:"/myYg",
+          query:{
+                name:index
+              }
+        });
+      };
+    }
+  },
+
+  mounted() {
+      document.getElementById("zyr-middle-bar").addEventListener('scroll', this.menu)
+    },
 }
 </script>
 <style scoped>
@@ -112,17 +183,28 @@ export default {
       padding: 8px;
       justify-content: space-between;
       align-items: center;
-      display: none;
     }
     .z-top-bar img{
       width: 20px;
       height: 33px;
     }
-    .z-top-bar div{
-      width: 73%;
-      height: 100%;
-      border-radius: 15px;
+    .z-top-bar-item{
+      width: 100%;
+      border-radius: 35px;
+      display: flex;
       background-color: #fff;
+      padding: 8px 10px;
+      align-items: center;
+      margin: 0 30px;
+    }
+    .z-top-bar-item img{
+      width: 15px;
+      height: 15px;
+    }
+    .z-top-bar-item div{
+      color: #999;
+      font-size: 14px;
+      padding-left: 8px;
     }
 
     /* 中部 */
@@ -130,6 +212,7 @@ export default {
       width: 100%;
       overflow: auto;
     }
+    /* 中部顶部 */
     .z-moddle-bar-list{
       width: 100%;
       background-color: rgb(0,0,95);
@@ -155,7 +238,7 @@ export default {
       border-radius: 35px;
       display: flex;
       background-color: #fff;
-      padding: 5px 10px;
+      padding: 8px 10px;
       align-items: center;
     }
     .z-middle-bar-list-item-one img{
@@ -166,6 +249,15 @@ export default {
       color: #999;
       font-size: 14px;
       padding-left: 8px;
+    }
+    /* 中部的猜你喜欢页面部分 */
+    .z-moddle-bar-list-box{
+      width: 100%;
+      height: 1600px;
+    }
+    /* 中部的商品列表部分 */
+    .z-moddle-goods-list{
+      display: flex;
     }
 
     /* 底部 */
