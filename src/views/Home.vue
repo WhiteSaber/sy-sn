@@ -27,11 +27,14 @@
         <div class="z-moddle-bar-list-box"></div>
         <!-- 中部的商品列表部分 -->
         <div class="z-moddle-goods-list">
-          
+          <!-- <div class="z-moddle-goods-list-item" v-if="(item,index) in goodsList">
+            <img :src="item.img">
+          </div> -->
         </div>
       </div>
     </div>
-
+    
+    <!-- 底部 -->
     <div class="z-bottom-bar">
         <div class="z-bottom-item" @click="itemChange(0)">
           <img src="../img/房子.png" alt="">
@@ -63,7 +66,49 @@ export default {
   data(){
     return {
       itemIndex:0,
-      scroll: ''     //滚动条高度
+      scroll: '' ,    //滚动条高度
+      // goodsList:[
+      //   {
+      //     name:"【新品】Apple二代新款AirPods（配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+      //     img:require("../img/headset")
+      //   },
+      //   {
+      //     name:"【新品】Apple二代新款AirPods（配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+      //     img:require("../img/headset")
+      //   },
+      //   {
+      //     name:"【新品】Apple二代新款AirPods（配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+      //     img:require("../img/headset")
+      //   },
+      //   {
+      //     name:"【新品】Apple二代新款AirPods（配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+      //     img:require("../img/headset")
+      //   },
+      //   {
+      //     name:"【新品】Apple二代新款AirPods（配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+      //     img:require("../img/headset")
+      //   },
+      //   {
+      //     name:"【新品】Apple二代新款AirPods（配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+      //     img:require("../img/headset")
+      //   },
+      //   {
+      //     name:"【新品】Apple二代新款AirPods（配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+      //     img:require("../img/headset")
+      //   },
+      //   {
+      //     name:"【新品】Apple二代新款AirPods（配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+      //     img:require("../img/headset")
+      //   },
+      //   {
+      //     name:"【新品】Apple二代新款AirPods（配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+      //     img:require("../img/headset")
+      //   },
+      //   {
+      //     name:"【新品】Apple二代新款AirPods（配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+      //     img:require("../img/headset")
+      //   },
+      // ]
     }
   },
 
@@ -167,6 +212,7 @@ export default {
       width: 100%;
       overflow: auto;
     }
+    /* 中部顶部 */
     .z-moddle-bar-list{
       width: 100%;
       background-color: rgb(0,0,95);
@@ -204,9 +250,14 @@ export default {
       font-size: 14px;
       padding-left: 8px;
     }
+    /* 中部的猜你喜欢页面部分 */
     .z-moddle-bar-list-box{
       width: 100%;
       height: 1600px;
+    }
+    /* 中部的商品列表部分 */
+    .z-moddle-goods-list{
+      display: flex;
     }
 
     /* 底部 */
