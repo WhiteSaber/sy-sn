@@ -17,18 +17,37 @@
                     <div v-for="(item,index) in classifyList" :key="item">
                         
                         <li v-if="myIndex==index" class="sign" @click="changeTab(index)">
-                            <span v-if="myIndex==index" class="orange">{{item}}</span>
-                            <span v-else>{{item}}</span>
+                            <span class="orange">{{item}}</span>
                         </li>
                         
                         <li v-else @click="changeTab(index)">
-                            <span v-if="myIndex==0" class="orange">{{item}}</span>
-                            <span v-else>{{item}}</span>
+                            <span>{{item}}</span>
                         </li>
                     </div>
                 </ul>
             </div>
-            <div class="s-select-content"></div>
+            <div class="s-select-content">
+                <div class="s-adver-box-1">
+                    <div class="s-adver-box-2">
+                        <div class="s-adver-box-3">
+                            <ul class="s-adver-box-4">
+                                <li>
+                                    <a>
+                                        <img src="../assets/s-618.jpg">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="s-selected-item">
+                    <div class="s-item-title">
+                        <span>热门推荐</span>
+                    </div>
+                    <ul class="s-item-list"></ul>
+                </div>
+            </div>
         </div>
     </div>
     <div class="z-bottom-bar">
@@ -62,7 +81,14 @@ export default {
     return { 
         itemIndex: 0,
         myIndex:0,
-        classifyList:["热门推荐","手机数码","大家电","电脑办公","厨卫大电","生活家电","食品酒水","个人护理","美妆护肤","奶粉尿裤","苏宁国际","珠宝首饰","品质男装","流行女装","精品女鞋"]
+        classifyList:["热门推荐","手机数码","大家电","电脑办公","厨卫大电","生活家电","食品酒水","个人护理","美妆护肤","奶粉尿裤","苏宁国际","珠宝首饰","品质男装","流行女装","精品女鞋"],
+        itemList:
+        [
+            {
+              name:"手机",
+              src:"../assets/s-手机.png"
+            },
+        ]
     };
   },
   methods: {
@@ -240,6 +266,11 @@ html body
     padding:0 12.5px;
 }
 
+.orange
+{
+    font-weight: bold;
+}
+
 .orange::before
 {
     content:'';
@@ -272,5 +303,119 @@ html body
     height:12px;
     bottom:-12px;
     background:url("../assets/s-down.png")center/100% no-repeat;
+}
+
+.s-select-content
+{
+    width:calc(100% - 90px);
+    height:900px;
+    background:#fff;
+    margin-left:90px;
+    padding:124.5px 15px 0;
+    overflow: auto;
+    float:left;
+}
+
+.s-adver-box-1
+{
+    position:fixed;
+    top:54px;
+    left:90px;
+    background:#fff;
+    z-index:100;
+}
+
+.s-adver-box-2
+{
+    margin:0 15px 0;
+}
+
+.s-adver-box-3
+{
+    width:253px;
+    height:94.5px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-top: 15px;
+}
+
+.s-adver-box-4
+{
+    white-space:nowrap;
+    font-size:0;
+    overflow: hidden;
+    list-style: none;
+}
+
+.s-adver-box-4 li 
+{
+    float:left;
+    width:255px;
+    height:94.5px;
+    position:relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.s-adver-box-4 a
+{
+    display:block;
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    position:absolute;
+    left:-1px;
+    top:0;
+}
+
+.s-adver-box-4 img
+{
+    display:block;
+    width:254px;
+    height:94.5px;
+    border-radius: 12px;
+}
+
+.s-selected-item
+{
+    margin:0;
+    padding:0;
+}
+
+.s-item-title
+{
+    padding:15px 0;
+}
+
+.s-item-title span
+{
+    color:#000;
+    font-weight: bold;
+    float:left;
+    font-size:12px;
+    line-height: 12px;
+}
+
+.s-item-list
+{
+    display:block;
+    margin-block-start:12px;
+    margin-block-end:12px;
+    margin-inline-start:0px;
+    margin-inline-end:0px;
+    padding-inline-start:40px;
+}
+
+.s-item-list li
+{
+  width:63px;
+  margin:0 33px 15px 0;
+}
+
+.s-item-list a
+{
+  text-decoration:none;
+  color:#333;
+  font-size:12px;
 }
 </style>
