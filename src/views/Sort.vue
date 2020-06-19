@@ -58,6 +58,7 @@
 import rementuijianVue from '../components/rementuijian.vue';
 import shoujishumaVue from '../components/shoujishuma.vue';
 import dajiadianVue from '../components/dajiadian.vue';
+import other from '../components/lue.vue';
 export default {
   data() {
     return { 
@@ -114,7 +115,19 @@ export default {
   {
       "my-tab-0":rementuijianVue,
       "my-tab-1":shoujishumaVue,
-      "my-tab-2":dajiadianVue
+      "my-tab-2":dajiadianVue,
+      "my-tab-3":other,
+      "my-tab-4":other,
+      "my-tab-5":other,
+      "my-tab-6":other,
+      "my-tab-7":other,
+      "my-tab-8":other,
+      "my-tab-9":other,
+      "my-tab-10":other,
+      "my-tab-11":other,
+      "my-tab-12":other,
+      "my-tab-13":other,
+      "my-tab-14":other,
   }
 };
 </script>
