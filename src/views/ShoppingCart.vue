@@ -65,6 +65,10 @@
         </div>
         <div class="pay">
               <div class="pay-item">
+            </div>
+        </div>
+        <div class="pay">
+              <div class="pay-check">
                   <span class="all-check-box">
                       <input type="all-checkbox">
                       <span class="all-check-box-2"></span>
@@ -82,6 +86,13 @@
                       <p>去结算(0)</p>
                   </div>
               
+              <div class="pay-price">
+                  <div class="all-price">合计：0.00</div>
+                  <div class="post-price">含运费：0</div>
+              </div>
+              <div class="pay-money">
+                  <p>去结算(0)</p>
+              </div>
         </div>
     </div>
     <div class="z-bottom-bar">
@@ -232,6 +243,7 @@ export default {
     {
       margin:12px 12px 0;
       width:93.5%;
+      width:356px;
       height:36px;
       padding:7.5px 12px;
       background: #ffe37e;
@@ -342,6 +354,14 @@ export default {
       flex-direction: row;
       position:relative;
       margin-right:6px;
+    }
+    .pay-check
+    {
+      width:52px;
+      height:45px;
+      display:flex;
+      flex-direction: row;
+      position:relative;
     }
 
     .all-check-box
