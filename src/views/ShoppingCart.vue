@@ -60,23 +60,28 @@
 
             <div class="recommend-container">
                 <div class="recommend-title"></div>
+                
             </div>
         </div>
         <div class="pay">
-              <div class="pay-check">
+              <div class="pay-item">
                   <span class="all-check-box">
                       <input type="all-checkbox">
                       <span class="all-check-box-2"></span>
                   </span>
                   <span class="all">全部</span>
               </div>
-              <div class="pay-price">
-                  <div class="all-price">合计：0.00</div>
-                  <div class="post-price">含运费：0</div>
+              <div class="pay-item">
+                  <div class="money-box">
+                      <div class="all-price">合计：0.00</div>
+                      <div class="post-price">含运费：0</div>
+                  </div>
               </div>
-              <div class="pay-money">
-                  <p>去结算(0)</p>
-              </div>
+              
+                  <div class="pay-money">
+                      <p>去结算(0)</p>
+                  </div>
+              
         </div>
     </div>
     <div class="z-bottom-bar">
@@ -226,7 +231,7 @@ export default {
     .location
     {
       margin:12px 12px 0;
-      width:356px;
+      width:93.5%;
       height:36px;
       padding:7.5px 12px;
       background: #ffe37e;
@@ -331,13 +336,12 @@ export default {
       border-top:0.5px solid rgba(0,0,0,0.08);
     }
 
-    .pay-check
+    .pay-item
     {
-      width:52px;
-      height:45px;
-      display:flex;
+      flex-grow: 1;
       flex-direction: row;
       position:relative;
+      margin-right:6px;
     }
 
     .all-check-box
@@ -372,7 +376,7 @@ export default {
       height:18px;
       border:1px solid #ccc;
       border-radius: 50%;
-      top:15px;
+      top:12px;
       right:0;
     }
 
@@ -384,19 +388,14 @@ export default {
       margin-left:6px; 
       position:absolute;
       top:13px;
-      right:0;
+      right:45px;
     }
 
-    .pay-price
-    {
-      width:204px;
-      height:37px;
-      margin:4px 0;
-      padding-right:4px;
-    }
+    
 
     .all-price
     {
+      margin-top:7.5px;
       text-align: right;
       font-size:14px;
       height:21px;
@@ -416,6 +415,7 @@ export default {
       width:100px;
       height:33px;
       margin:6px 0;
+      float:right;
       background-color: #fc0;
       border-radius: 6px;
     }
@@ -447,5 +447,10 @@ export default {
       background-size: 100%;
     }
 
-    
+    .money-box
+    {
+      width:auto;
+      height:auto;
+      float:right;
+    }
 </style>
