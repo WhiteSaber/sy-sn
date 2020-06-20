@@ -8,7 +8,7 @@
                                     <ul class="s-adver-box-4">
                                         <li>
                                             <a>
-                                                <img src="../assets/s-618.jpg">
+                                                <img src="../assets/s618.jpg">
                                             </a>
                                         </li>
                                     </ul>
@@ -107,15 +107,15 @@ export default {
             [
                 {
                     name:"手机",
-                    src:require("../assets/s-shouji.png"),
+                    src:require("../assets/sshouji.png"),
                 },
                 {
                     name:"笔记本",
-                    src:require("../assets/s-bijiben.jpg"),
+                    src:require("../assets/sbijiben.jpg"),
                 },
                 {
                     name:"平板电脑",
-                    src:require("../assets/s-pingbandiannao.png"),
+                    src:require("../assets/spingbandiannao.png"),
                 },
             ],
 
@@ -123,15 +123,15 @@ export default {
             [
                 {
                 name:"冰箱",
-                src:require("../assets/s-bingxiang.jpg"),
+                src:require("../assets/sbingxiang.jpg"),
                 },
                 {
                     name:"电风扇",
-                    src:require("../assets/s-dianfengshan.jpg"),
+                    src:require("../assets/sdianfengshan.jpg"),
                 },
                 {
                     name:"破壁机",
-                    src:require("../assets/s-pobiji.jpg"),
+                    src:require("../assets/spobiji.jpg"),
                 },
             ],
 
@@ -139,15 +139,15 @@ export default {
             [
                 {
                     name:"空调",
-                    src:require("../assets/s-kongtiao.jpg"),
+                    src:require("../assets/skongtiao.jpg"),
                 },
                 {
                     name:"电视机",
-                    src:require("../assets/s-dianshiji.jpg"),
+                    src:require("../assets/sdianshiji.jpg"),
                 },
                 {
                     name:"粽子",
-                    src:require("../assets/s-zongzi.png"),
+                    src:require("../assets/szongzi.png"),
                 },
             ],
 
@@ -155,15 +155,15 @@ export default {
             [
                 {
                     name:"热水器",
-                    src:require("../assets/s-reshuiqi.jpg"),
+                    src:require("../assets/sreshuiqi.jpg"),
                 },
                 {
                     name:"哑铃",
-                    src:require("../assets/s-yaling.jpg"),
+                    src:require("../assets/syaling.jpg"),
                 },
                 {
                     name:"瑜伽垫",
-                    src:require("../assets/s-yujiadian.jpg"),
+                    src:require("../assets/syujiadian.jpg"),
                 },
             ],
 
@@ -171,15 +171,15 @@ export default {
             [
                 {
                     name:"跑步机",
-                    src:require("../assets/s-paobuji.jpg"),
+                    src:require("../assets/spaobuji.jpg"),
                 },
                 {
                     name:"洗衣机",
-                    src:require("../assets/s-xiyiji.jpg"),
+                    src:require("../assets/sxiyiji.jpg"),
                 },
                 {
                     name:"手表",
-                    src:require("../assets/s-shoubiao.png"),
+                    src:require("../assets/sshoubiao.png"),
                 },
             ],
 
@@ -187,15 +187,15 @@ export default {
             [
                 {
                     name:"奶粉",
-                    src:require("../assets/s-naifen.png"),
+                    src:require("../assets/snaifen.png"),
                 },
                 {
                     name:"白酒",
-                    src:require("../assets/s-baijiu.png"),
+                    src:require("../assets/sbaijiu.png"),
                 },
                 {
                     name:"休闲零食",
-                    src:require("../assets/s-xiuxianlingshi.jpg"),
+                    src:require("../assets/sxiuxianlingshi.jpg"),
                 },
             ],
             
@@ -203,15 +203,15 @@ export default {
             [
                 {
                     name:"水果",
-                    src:require("../assets/s-shuiguo.jpg"),
+                    src:require("../assets/sshuiguo.jpg"),
                 },
                 {
                     name:"文化图书",
-                    src:require("../assets/s-wenhuatushu.jpg"),
+                    src:require("../assets/swenhuatushu.jpg"),
                 },
                 {
                     name:"生活用纸",
-                    src:require("../assets/s-shenghuoyongzhi.jpg"),
+                    src:require("../assets/sshenghuoyongzhi.jpg"),
                 },
             ],
         }
