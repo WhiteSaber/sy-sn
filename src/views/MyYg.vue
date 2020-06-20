@@ -31,7 +31,7 @@
                 </div>
                 <!-- 内容 - 下段 -->
                 <div class="c-content-three">
-                    <button class="c-content-but">登录</button>
+                    <button class="c-content-but" @click="login">登录</button>
                     <p @click="CSignIn">验证码登录</p>
                 </div>
             </div>
@@ -51,7 +51,7 @@
                 </div>
                 <!-- 内容 - 下段 -->
                 <div class="c-content-three">
-                    <button class="c-content-but">登录</button>
+                    <button class="c-content-but" @click="login">登录</button>
                     <p @click="CSignIns">账号密码登录</p>
                 </div>
             </div>  
@@ -98,7 +98,15 @@ export default {
         CSignIns(){
             this.flag = "true"
         },
-        
+        login()
+        {
+            this.$router.push({
+            path:"/afterlogin",
+            query:{
+              name:"afterlogin"
+            }
+      });
+        }
         
     }
 }

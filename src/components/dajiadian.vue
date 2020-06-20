@@ -269,15 +269,15 @@ export default {
             [
                 {
                     name:"空调挂机",
-                    src:require("../assets/s-kongtiaoguaji.jpg"),
+                    src:require("../assets/skongtiaoguaji.jpg"),
                 },
                 {
                     name:"空调柜机",
-                    src:require("../assets/s-kongtiaoguiji.png"),
+                    src:require("../assets/skongtiaoguiji.png"),
                 },
                 {
                     name:"移动空调",
-                    src:require("../assets/s-yidongkongtiao.png"),
+                    src:require("../assets/syidongkongtiao.png"),
                 },
             ],
 
@@ -285,15 +285,15 @@ export default {
             [
                 {
                 name:"风管机",
-                src:require("../assets/s-fengguanji.jpg"),
+                src:require("../assets/sfengguanji.jpg"),
                 },
                 {
                     name:"多联机",
-                    src:require("../assets/s-duolianji.jpg"),
+                    src:require("../assets/sduolianji.jpg"),
                 },
                 {
                     name:"一级能效",
-                    src:require("../assets/s-yijinengxiao.jpg"),
+                    src:require("../assets/syijinengxiao.jpg"),
                 },
             ],
 
@@ -301,15 +301,15 @@ export default {
             [
                 {
                     name:"空调以旧换新",
-                    src:require("../assets/s-kongtiaoyijiuhuanxin.png"),
+                    src:require("../assets/skongtiaoyijiuhuanxin.png"),
                 },
                 {
                     name:"空调零元安装",
-                    src:require("../assets/s-kongtiaolingyuananzhuang.png"),
+                    src:require("../assets/skongtiaolingyuananzhuang.png"),
                 },
                 {
                     name:"空调免息",
-                    src:require("../assets/s-kongtiaomianxi.jpg"),
+                    src:require("../assets/skongtiaomianxi.jpg"),
                 },
             ],
 
@@ -317,15 +317,15 @@ export default {
             [
                 {
                     name:"冰箱",
-                    src:require("../assets/s-bingxiang.jpg"),
+                    src:require("../assets/sbingxiang.jpg"),
                 },
                 {
                     name:"对开门冰箱",
-                    src:require("../assets/s-duikaimenbingxiang.jpg"),
+                    src:require("../assets/sduikaimenbingxiang.jpg"),
                 },
                 {
                     name:"多门冰箱",
-                    src:require("../assets/s-duomenbingxiang.jpg"),
+                    src:require("../assets/sduomenbingxiang.jpg"),
                 },
             ],
 
@@ -333,15 +333,15 @@ export default {
             [
                 {
                     name:"十字对开门冰箱",
-                    src:require("../assets/s-shiziduikaimenbingxiang.jpg"),
+                    src:require("../assets/sshiziduikaimenbingxiang.jpg"),
                 },
                 {
                     name:"三门冰箱",
-                    src:require("../assets/s-sanmenbingxiang.jpg"),
+                    src:require("../assets/ssanmenbingxiang.jpg"),
                 },
                 {
                     name:"双门冰箱",
-                    src:require("../assets/s-shuangmenbingxiang.jpg"),
+                    src:require("../assets/sshuangmenbingxiang.jpg"),
                 },
             ],
 
@@ -349,15 +349,15 @@ export default {
             [
                 {
                     name:"冷柜",
-                    src:require("../assets/s-lenggui.jpg"),
+                    src:require("../assets/slenggui.jpg"),
                 },
                 {
                     name:"商用冷柜",
-                    src:require("../assets/s-shangyonglenggui.jpg"),
+                    src:require("../assets/sshangyonglenggui.jpg"),
                 },
                 {
                     name:"红酒柜",
-                    src:require("../assets/s-hongjiugui.png"),
+                    src:require("../assets/shongjiugui.png"),
                 },
             ],
             
@@ -365,15 +365,15 @@ export default {
             [
                 {
                     name:"洗干一体机",
-                    src:require("../assets/s-xiganyitiji.jpg"),
+                    src:require("../assets/sxiganyitiji.jpg"),
                 },
                 {
                     name:"滚筒洗衣机",
-                    src:require("../assets/s-guntongxiyiji.jpg"),
+                    src:require("../assets/sguntongxiyiji.jpg"),
                 },
                 {
                     name:"波轮洗衣机",
-                    src:require("../assets/s-bolunxiyiji.jpg"),
+                    src:require("../assets/sbolunxiyiji.jpg"),
                 },
             ],
 
@@ -381,15 +381,15 @@ export default {
             [
                 {
                     name:"大容量洗衣机",
-                    src:require("../assets/s-darongliangxiyiji.jpg"),
+                    src:require("../assets/sdarongliangxiyiji.jpg"),
                 },
                 {
                     name:"迷你洗衣机",
-                    src:require("../assets/s-minixiyiji.jpg"),
+                    src:require("../assets/sminixiyiji.jpg"),
                 },
                 {
                     name:"烘干机",
-                    src:require("../assets/s-hongganji.png"),
+                    src:require("../assets/shongganji.png"),
                 },
             ],
 
@@ -397,15 +397,15 @@ export default {
             [
                 {
                     name:"电视",
-                    src:require("../assets/s-dianshiji.jpg"),
+                    src:require("../assets/sdianshiji.jpg"),
                 },
                 {
                     name:"55吋电视机",
-                    src:require("../assets/s-55cundianshiji.jpg"),
+                    src:require("../assets/s55cundianshiji.jpg"),
                 },
                 {
                     name:"全面屏电视机",
-                    src:require("../assets/s-quanmianpingjianshiji.jpg"),
+                    src:require("../assets/squanmianpingjianshiji.jpg"),
                 },
             ],
 
@@ -413,15 +413,15 @@ export default {
             [
                 {
                     name:"65吋电视机",
-                    src:require("../assets/s-65cundianshiji.jpg"),
+                    src:require("../assets/s65cundianshiji.jpg"),
                 },
                 {
                     name:"4K电视机",
-                    src:require("../assets/s-4kdianshiji.png"),
+                    src:require("../assets/s4kdianshiji.png"),
                 },
                 {
                     name:"教育电视",
-                    src:require("../assets/s-jiaoyudianshi.jpg"),
+                    src:require("../assets/sjiaoyudianshi.jpg"),
                 },
             ],
 
@@ -429,15 +429,15 @@ export default {
             [
                 {
                     name:"家庭影院",
-                    src:require("../assets/s-jiatingyingyuan.jpg"),
+                    src:require("../assets/sjiatingyingyuan.jpg"),
                 },
                 {
                     name:"智慧屏",
-                    src:require("../assets/s-zhihuiping.jpg"),
+                    src:require("../assets/szhihuiping.jpg"),
                 },
                 {
                     name:"投影仪",
-                    src:require("../assets/s-touyingyi.jpg"),
+                    src:require("../assets/stouyingyi.jpg"),
                 },
             ],
 
@@ -445,15 +445,15 @@ export default {
             [
                 {
                     name:"壁挂式新风",
-                    src:require("../assets/s-biguashixinfeng.jpg"),
+                    src:require("../assets/sbiguashixinfeng.jpg"),
                 },
                 {
                     name:"吊顶式新风",
-                    src:require("../assets/s-diaodingshixinfeng.jpg"),
+                    src:require("../assets/sdiaodingshixinfeng.jpg"),
                 },
                 {
                     name:"前置过滤器",
-                    src:require("../assets/s-qianzhiguolvqi.jpg"),
+                    src:require("../assets/sqianzhiguolvqi.jpg"),
                 },
             ],
 
@@ -461,15 +461,15 @@ export default {
             [
                 {
                     name:"空气能热水器",
-                    src:require("../assets/s-kongqinengreshuiqi.jpg"),
+                    src:require("../assets/skongqinengreshuiqi.jpg"),
                 },
                 {
                     name:"壁挂炉",
-                    src:require("../assets/s-bigualu.jpg"),
+                    src:require("../assets/sbigualu.jpg"),
                 },
                 {
                     name:"全屋净水",
-                    src:require("../assets/s-quanwujingshui.jpg"),
+                    src:require("../assets/squanwujingshui.jpg"),
                 },
             ],
 
@@ -477,15 +477,15 @@ export default {
             [
                 {
                     name:"商用发酵机",
-                    src:require("../assets/s-shangyongfaxiaoji.jpg"),
+                    src:require("../assets/sshangyongfaxiaoji.jpg"),
                 },
                 {
                     name:"商用展示柜",
-                    src:require("../assets/s-shangyongzhanshigui.jpg"),
+                    src:require("../assets/sshangyongzhanshigui.jpg"),
                 },
                 {
                     name:"商用冰柜",
-                    src:require("../assets/s-shangyongbinggui.jpg"),
+                    src:require("../assets/sshangyongbinggui.jpg"),
                 },
             ],
 
@@ -493,15 +493,15 @@ export default {
             [
                 {
                     name:"商用冰箱",
-                    src:require("../assets/s-shangyongbingxiang.jpg"),
+                    src:require("../assets/sshangyongbingxiang.jpg"),
                 },
                 {
                     name:"商用冷柜",
-                    src:require("../assets/s-shangyongchufanglenggui.jpg"),
+                    src:require("../assets/sshangyongchufanglenggui.jpg"),
                 },
                 {
                     name:"商用制冰机",
-                    src:require("../assets/s-shangyongzhibingji.jpg"),
+                    src:require("../assets/sshangyongzhibingji.jpg"),
                 },
             ],
 
@@ -509,15 +509,15 @@ export default {
             [
                 {
                     name:"商用电烤箱",
-                    src:require("../assets/s-shangyongdiankaoxiang.jpg"),
+                    src:require("../assets/sshangyongdiankaoxiang.jpg"),
                 },
                 {
                     name:"天花机",
-                    src:require("../assets/s-tianhuaji.jpg"),
+                    src:require("../assets/stianhuaji.jpg"),
                 },
                 {
                     name:"商用柜机",
-                    src:require("../assets/s-shangyongguiji.jpg"),
+                    src:require("../assets/sshangyongguiji.jpg"),
                 },
             ],
 
@@ -525,15 +525,15 @@ export default {
             [
                 {
                     name:"美的",
-                    src:require("../assets/s-meidi.jpg"),
+                    src:require("../assets/smeidi.jpg"),
                 },
                 {
                     name:"海尔",
-                    src:require("../assets/s-haier.jpg"),
+                    src:require("../assets/shaier.jpg"),
                 },
                 {
                     name:"创维",
-                    src:require("../assets/s-chuangwei.jpg"),
+                    src:require("../assets/schuangwei.jpg"),
                 },
             ],
 
@@ -541,15 +541,15 @@ export default {
             [
                 {
                     name:"TCL",
-                    src:require("../assets/s-tcl.jpg"),
+                    src:require("../assets/stcl.jpg"),
                 },
                 {
                     name:"奥克斯",
-                    src:require("../assets/s-aokesi.jpg"),
+                    src:require("../assets/saokesi.jpg"),
                 },
                 {
                     name:"格力",
-                    src:require("../assets/s-geli.jpg"),
+                    src:require("../assets/sgeli.jpg"),
                 },
             ],
 
@@ -557,15 +557,15 @@ export default {
             [
                 {
                     name:"海信",
-                    src:require("../assets/s-haixin.jpg"),
+                    src:require("../assets/shaixin.jpg"),
                 },
                 {
                     name:"西门子",
-                    src:require("../assets/s-ximenzi.jpg"),
+                    src:require("../assets/sximenzi.jpg"),
                 },
                 {
                     name:"康佳",
-                    src:require("../assets/s-kangjia.jpg"),
+                    src:require("../assets/skangjia.jpg"),
                 },
             ],
 

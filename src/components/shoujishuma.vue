@@ -8,7 +8,7 @@
                                     <ul class="s-adver-box-4">
                                         <li>
                                             <a>
-                                                <img src="../assets/s-2020.jpg">
+                                                <img src="../assets/s2020.jpg">
                                             </a>
                                         </li>
                                     </ul>
@@ -137,15 +137,15 @@ export default {
             [
                 {
                     name:"apple",
-                    src:require("../assets/s-apple.jpg"),
+                    src:require("../assets/sapple.jpg"),
                 },
                 {
                     name:"huawei",
-                    src:require("../assets/s-huawei.jpg"),
+                    src:require("../assets/shuawei.jpg"),
                 },
                 {
                     name:"vivo",
-                    src:require("../assets/s-vivo.jpg"),
+                    src:require("../assets/svivo.jpg"),
                 },
             ],
 
@@ -153,15 +153,15 @@ export default {
             [
                 {
                 name:"honor",
-                src:require("../assets/s-honor.jpg"),
+                src:require("../assets/shonor.jpg"),
                 },
                 {
                     name:"xiaomi",
-                    src:require("../assets/s-xiaomi.jpg"),
+                    src:require("../assets/sxiaomi.jpg"),
                 },
                 {
                     name:"oppo",
-                    src:require("../assets/s-oppo.jpg"),
+                    src:require("../assets/soppo.jpg"),
                 },
             ],
 
@@ -169,15 +169,15 @@ export default {
             [
                 {
                     name:"realme",
-                    src:require("../assets/s-realme.png"),
+                    src:require("../assets/srealme.png"),
                 },
                 {
                     name:"samsung",
-                    src:require("../assets/s-sumsung.jpg"),
+                    src:require("../assets/ssumsung.jpg"),
                 },
                 {
                     name:"iqoo",
-                    src:require("../assets/s-iqoo.jpg"),
+                    src:require("../assets/siqoo.jpg"),
                 },
             ],
 
@@ -185,15 +185,15 @@ export default {
             [
                 {
                     name:"yijia",
-                    src:require("../assets/s-yijia.jpg"),
+                    src:require("../assets/syijia.jpg"),
                 },
                 {
                     name:"鹿客",
-                    src:require("../assets/s-loock.jpg"),
+                    src:require("../assets/sloock.jpg"),
                 },
                 {
                     name:"小天才",
-                    src:require("../assets/s-xiaotiancai.jpg"),
+                    src:require("../assets/sxiaotiancai.jpg"),
                 },
             ],
 
@@ -201,15 +201,15 @@ export default {
             [
                 {
                     name:"大疆创新",
-                    src:require("../assets/s-dajiangchuangxin.png"),
+                    src:require("../assets/sdajiangchuangxin.png"),
                 },
                 {
                     name:"bose",
-                    src:require("../assets/s-bose.jpg"),
+                    src:require("../assets/sbose.jpg"),
                 },
                 {
                     name:"步步高",
-                    src:require("../assets/s-bubugao.jpg"),
+                    src:require("../assets/sbubugao.jpg"),
                 },
             ],
 
@@ -217,15 +217,15 @@ export default {
             [
                 {
                     name:"全部手机",
-                    src:require("../assets/s-quanbushouji.jpg"),
+                    src:require("../assets/squanbushouji.jpg"),
                 },
                 {
                     name:"5g手机",
-                    src:require("../assets/s-5gshouji.jpg"),
+                    src:require("../assets/s5gshouji.jpg"),
                 },
                 {
                     name:"全面屏手机",
-                    src:require("../assets/s-quanmianpingshouji.jpg"),
+                    src:require("../assets/squanmianpingshouji.jpg"),
                 },
             ],
             
@@ -233,15 +233,15 @@ export default {
             [
                 {
                     name:"游戏手机",
-                    src:require("../assets/s-youxishouji.jpg"),
+                    src:require("../assets/syouxishouji.jpg"),
                 },
                 {
                     name:"老人机",
-                    src:require("../assets/s-laorenji.jpg"),
+                    src:require("../assets/slaorenji.jpg"),
                 },
                 {
                     name:"拍照手机",
-                    src:require("../assets/s-paizhaoshouji.jpg"),
+                    src:require("../assets/spaizhaoshouji.jpg"),
                 },
             ],
 
@@ -249,15 +249,15 @@ export default {
             [
                 {
                     name:"指纹手机",
-                    src:require("../assets/s-zhiwenshouji.jpg"),
+                    src:require("../assets/szhiwenshouji.jpg"),
                 },
                 {
                     name:"面部识别手机",
-                    src:require("../assets/s-mianbushibieshouji.jpg"),
+                    src:require("../assets/smianbushibieshouji.jpg"),
                 },
                 {
                     name:"女性手机",
-                    src:require("../assets/s-nvxingshouji.jpg"),
+                    src:require("../assets/snvxingshouji.jpg"),
                 },
             ],
 
@@ -265,15 +265,15 @@ export default {
             [
                 {
                     name:"长续航手机",
-                    src:require("../assets/s-changxuhangshouji.jpg"),
+                    src:require("../assets/schangxuhangshouji.jpg"),
                 },
                 {
                     name:"以旧换新手机",
-                    src:require("../assets/s-yijiuhuanxin.jpg"),
+                    src:require("../assets/syijiuhuanxin.jpg"),
                 },
                 {
                     name:"手机维修",
-                    src:require("../assets/s-shoujiweixiu.png"),
+                    src:require("../assets/sshoujiweixiu.png"),
                 },
             ],
         }
