@@ -143,7 +143,7 @@ export default {
     }
     /* 内容 */
     .c-app-content{
-         width: 100%;
+        width: 100%;
         margin-top: 26.88px;
         padding: 0 36px;
     }
@@ -160,7 +160,8 @@ export default {
     .c-content-title{
         display: inline-block;
         color: #222;
-        font-size: 0.72rem;
+        font-size: 12px;
+        font-weight: 900;
     }
     /* 内容 - 中段 */
     .c-content-two{
