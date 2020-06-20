@@ -163,65 +163,188 @@
       </a>
       <!-- 免息商品列表 -->
       <div class="z-middle-InterestFree-list">
-        <div class="z-middle-InterestFree-list-one">
-          <img src="../img/ZMobileCommunication.jpg" alt="">
-          <p>手机通讯</p>
-          <div>
-            <p>享24期免息</p>
+        <a href="https://cuxiao.m.suning.com/scms/m0522phoneapp.html?adTypeCode=1137&adId=https%3A%2F%2Flib.suning.com%2Fweex%2Fm0522phoneapp.js%3FpageCode%3Dm0522phoneapp&productCode=000000011264323937&shopCode=0000000000&supplierCode=0000000000&productType=1&vendorId=&productName=&handwork=&contentId=&promotionId=&pictureUrl=%2F%2Fimgservice.suning.cn%2Fuimg1%2Fb2c%2Fimage%2F2jZy3Ou4CoQQCRB6fENRPg.jpg&safp=f73ee1cf.wapindex7.122836234403.2&safc=0.1.rec_16-49_16-49_none_inpo:1,cpn:6,ab:B_cateid:142746&safpn=10001">
+          <div class="z-middle-InterestFree-list-one">
+            <img src="../img/ZMobileCommunication.jpg" alt="">
+            <p class="z-middle-InterestFree-list-p">手机通讯</p>
+            <div class="z-middle-InterestFree-list-p-box">
+              <p class="z-middle-InterestFree-list-p-one">享24期免息</p>
+            </div>
           </div>
-        </div>
-        <div class="z-middle-InterestFree-list-two">
-          <img src="../img/ZPapercleaning.jpg" alt="">
-          <p>纸品清洁</p>
-          <div>
-            <p>第二件半价</p>
+        </a>
+        <a href="https://cuxiao.m.suning.com/scms/618zpqj.html?adTypeCode=1137&adId=https%3A%2F%2Flib.suning.com%2Fweex%2F618zpqj.js%3FpageCode%3D618zpqj&productCode=000000000104053602&shopCode=0000000000&supplierCode=0000000000&productType=1&vendorId=&productName=&handwork=&contentId=&promotionId=&pictureUrl=%2F%2Fimgservice.suning.cn%2Fuimg1%2Fb2c%2Fimage%2FE8i1OXoVgUPV-unp1NdBGQ.jpg&safp=f73ee1cf.wapindex7.122836234403.4&safc=0.1.rec_16-49_16-49_none_inpo:1,cpn:9,ab:B_cateid:188703&safpn=10001">
+          <div class="z-middle-InterestFree-list-two">
+            <img src="../img/ZPapercleaning.jpg" alt="">
+            <p class="z-middle-InterestFree-list-p">纸品清洁</p>
+            <div>
+              <p class="z-middle-InterestFree-list-p-two">第二件半价</p>
+            </div>
           </div>
-        </div>
-        <div class="z-middle-InterestFree-list-three">
-          <img src="../img/ZFashionclothing.jpg" alt="">
-          <p>时尚服饰</p>
-          <div>
-            <p>满399减200</p>
+        </a>
+        <a href="https://cuxiao.m.suning.com/scms/618bhbfh.html?productCode=000000000782634450&shopCode=0000000000&supplierCode=0000000000&productType=1&vendorId=&productName=&handwork=&contentId=&promotionId=&pictureUrl=%2F%2Fimgservice.suning.cn%2Fuimg1%2Fb2c%2Fimage%2FnNbwZJHiFgeknhfQqwoykA.jpg&safp=f73ee1cf.wapindex7.122836234403.6&safc=0.1.rec_16-49_16-49_none_inpo:1,cpn:9,ab:B_cateid:188881&safpn=10001">
+          <div class="z-middle-InterestFree-list-three">
+            <img src="../img/ZFashionclothing.jpg" alt="">
+            <p class="z-middle-InterestFree-list-p">时尚服饰</p>
+            <div>
+              <p class="z-middle-InterestFree-list-p-three">满399减200</p>
+            </div>
           </div>
-        </div>
-        <div class="z-middle-InterestFree-list-four">
-          <img src="../img/ZSpecialOffer.jpg" alt="">
-          <p>极物特价狂欢</p>
-          <div>
-            <p>299减180</p>
+        </a>
+        <a href="https://cuxiao.m.suning.com/scms/jwtjkh.html?adTypeCode=1137&adId=https%3A%2F%2Flib.suning.com%2Fweex%2Fjwtjkh.js%3FpageCode%3Djwtjkh&productCode=000000010086453403&shopCode=0000000000&supplierCode=0000000000&productType=7&vendorId=&productName=&handwork=&contentId=&promotionId=&pictureUrl=%2F%2Fimgservice.suning.cn%2Fuimg1%2Fb2c%2Fimage%2FZw3KZ-cbHZCjCHVThXf4aw.jpg">
+          <div class="z-middle-InterestFree-list-four">
+            <img src="../img/ZSpecialOffer.jpg" alt="">
+            <p class="z-middle-InterestFree-list-p">极物特价狂欢</p>
+            <div>
+              <p class="z-middle-InterestFree-list-p-four">299减180</p>
+            </div>
           </div>
-        </div>
-        <div class="z-middle-InterestFree-list-five">
-          <img src="../img/Zfresh.jpg" alt="">
-          <p>美味生鲜</p>
-          <div>
-            <p>满199减100</p>
+        </a>
+        <a href="https://cuxiao.m.suning.com/scms/qc0518.html?adTypeCode=1137&adId=https%3A%2F%2Flib.suning.com%2Fweex%2Fqc0518.js%3FpageCode%3Dqc0518&productCode=000000011166411679&shopCode=0000000000&supplierCode=0000000000&productType=1&vendorId=&productName=&handwork=&contentId=&promotionId=&pictureUrl=%2F%2Fimgservice.suning.cn%2Fuimg1%2Fb2c%2Fimage%2FcDtUv66SuaPrq3th9hpHoA.jpg&safp=f73ee1cf.wapindex7.122836234403.10&safc=0.1.rec_16-49_16-49_none_inpo:1,cpn:6,ab:B_cateid:188756&safpn=10001">
+          <div class="z-middle-InterestFree-list-five">
+            <img src="../img/Zfresh.jpg" alt="">
+            <p class="z-middle-InterestFree-list-p">美味生鲜</p>
+            <div>
+              <p class="z-middle-InterestFree-list-p-one">满199减100</p>
+            </div>
           </div>
-        </div>
-        <div class="z-middle-InterestFree-list-six">
-          <img src="../img/ZAutomobile.jpg" alt="">
-          <p>汽车用品</p>
-          <div>
-            <p>满180减30</p>
+        </a>
+        <a href="https://cuxiao.m.suning.com/scms/618xbjf.html?adTypeCode=1137&adId=https%3A%2F%2Flib.suning.com%2Fweex%2F618xbjf.js%3FpageCode%3D618xbjf&productCode=000000011135210654&shopCode=0070183728&supplierCode=0070183728&productType=2&vendorId=&productName=&handwork=&contentId=&promotionId=&pictureUrl=%2F%2Fimgservice.suning.cn%2Fuimg1%2Fb2c%2Fimage%2FOBhhMZobdD6MrPE6HgMtoA.jpg&safp=f73ee1cf.wapindex7.122836234403.12&safc=0.1.rec_16-49_16-49_none_inpo:1,cpn:6,ab:B_cateid:196710&safpn=10001">
+          <div class="z-middle-InterestFree-list-six">
+            <img src="../img/ZAutomobile.jpg" alt="">
+            <p class="z-middle-InterestFree-list-p">汽车用品</p>
+            <div>
+              <p class="z-middle-InterestFree-list-p-two">满180减30</p>
+            </div>
           </div>
-        </div>
-        <div class="z-middle-InterestFree-list-seven">
-          <img src="../img/ZHometextiles.jpg" alt="">
-          <p>鞋包家纺</p>
-          <div>
-            <p>满99减50</p>
+        </a>
+        <a href="https://cuxiao.m.suning.com/scms/zyjcxianhuo0225.html?adTypeCode=1137&adId=https%3A%2F%2Flib.suning.com%2Fweex%2Fzyjcxianhuo0225.js%3FpageCode%3Dzyjcxianhuo0225&productCode=000000010261206859&shopCode=0000000000&supplierCode=0000000000&productType=1&vendorId=&productName=&handwork=&contentId=&promotionId=&pictureUrl=%2F%2Fimgservice.suning.cn%2Fuimg1%2Fb2c%2Fimage%2FTn5Je81PnT2TTUYyi24xOA.jpg&safp=f73ee1cf.wapindex7.122836234403.14&safc=0.1.rec_16-49_16-49_none_inpo:3,cpn:9,ab:B_cateid:142787&safpn=10001">
+          <div class="z-middle-InterestFree-list-seven">
+            <img src="../img/ZHometextiles.jpg" alt="">
+            <p class="z-middle-InterestFree-list-p">鞋包家纺</p>
+            <div>
+              <p class="z-middle-InterestFree-list-p-three">满99减50</p>
+            </div>
           </div>
-        </div>
-        <div class="z-middle-InterestFree-list-eight">
-          <img src="../img/ZMakeup.jpg" alt="">
-          <p>靓丽美妆</p>
-          <div>
-            <p>满199减100</p>
+        </a>
+        <a href="https://cuxiao.m.suning.com/scms/snjkrhdcopy2.html?adTypeCode=1137&adId=https%3A%2F%2Flib.suning.com%2Fweex%2Fsnjkrhdcopy2.js%3FpageCode%3Dsnjkrhdcopy2&productCode=000000000178526754&shopCode=0000000000&supplierCode=0000000000&productType=1&vendorId=&productName=&handwork=&contentId=&promotionId=&pictureUrl=%2F%2Fimgservice.suning.cn%2Fuimg1%2Fb2c%2Fimage%2FGWcgil5tFO2Vv2qZv_LPyg.jpg&safp=f73ee1cf.wapindex7.122836234403.16&safc=0.1.rec_16-49_16-49_none_inpo:3,cpn:9,ab:B_cateid:188698&safpn=10001">
+          <div class="z-middle-InterestFree-list-eight">
+            <img src="../img/ZMakeup.jpg" alt="">
+            <p class="z-middle-InterestFree-list-p">靓丽美妆</p>
+            <div>
+              <p class="z-middle-InterestFree-list-p-four">满199减100</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <!-- 推荐榜单 -->
+      <div class="z-middle-recommended-list">
+        <img src="../img/sRecommdedTitle.png" alt="" class="z-middle-recommended-title">
+        <div class="z-middle-recommended-list-content">
+          <div class="z-middle-recommended-list-item">
+            <div class="z-middle-recommended-item-img-Bigbox">
+              <div class="z-middle-recommended-item-img-box">
+                <img src="../img/sRecommendedItemOne.jpg" alt="" class="z-middle-recommended-item-img">
+              </div>
+              <span>趋势榜</span>
+              <p class="z-middle-recommended-item-pOne">时尚智能手环榜</p>
+              <p class="z-middle-recommended-item-pTwo">本周趋势上升49%</p>
+            </div>
+          </div>
+          <!-- 第二个轮播图 -->
+          <swiper ref="mySwiper" :options="swiperOptionsTwo" class="z-middle-recommended-list-item">
+            <swiper-slide class="z-middle-recommended-item-img-Bigbo-swiper">
+              <div class="z-middle-recommended-item-img-box">
+                <img src="../img/z1.jpg" alt="" class="z-middle-recommended-item-img">
+              </div>
+              <span>人气榜</span>
+              <p class="z-middle-recommended-item-pOne">人气热销手机榜</p>
+              <p class="z-middle-recommended-item-pTwo">卖爆71.4万件</p>
+            </swiper-slide>
+            <swiper-slide class="z-middle-recommended-item-img-Bigbo-swiper">
+              <div class="z-middle-recommended-item-img-box">
+                <img src="../img/z0.jpg" alt="" class="z-middle-recommended-item-img">
+              </div>
+              <span>人气榜</span>
+              <p class="z-middle-recommended-item-pOne">人气热销手机榜</p>
+              <p class="z-middle-recommended-item-pTwo">卖爆71.4万件</p>
+            </swiper-slide>
+            <swiper-slide class="z-middle-recommended-item-img-Bigbo-swiper">
+              <div class="z-middle-recommended-item-img-box">
+                <img src="../img/z2.jpg" alt="" class="z-middle-recommended-item-img">
+              </div>
+              <span>人气榜</span>
+              <p class="z-middle-recommended-item-pOne">人气热销手机榜</p>
+              <p class="z-middle-recommended-item-pTwo">卖爆71.4万件</p>
+            </swiper-slide>
+            <div class="swiper-paginationTwo" slot="pagination"></div>
+          </swiper>
+          <div class="z-middle-recommended-list-item">
+            <div class="z-middle-recommended-item-img-Bigbox">
+              <div class="z-middle-recommended-item-img-box">
+                <img src="../img/sRecommendedItemThree.jpg" alt="" class="z-middle-recommended-item-img">
+              </div>
+              <span>人气榜</span>
+              <p class="z-middle-recommended-item-pOne">瓶装洗衣液榜</p>
+              <p class="z-middle-recommended-item-pTwo">卖爆9.8万件</p>
+            </div>
           </div>
         </div>
       </div>
-      <!-- 中部的猜你喜欢页面部分 -->
-      <div class="z-moddle-bar-list-box"></div>
+      <!-- 最后一栏项目 -->
+      <div class="z-middle-setkill">
+        <div class="z-middle-setkill-item">
+          <p class="z-middle-setkill-span-one">精选游泳运动绑<span>趋势榜</span></p>
+          <p class="z-middle-setkill-span-two">卖爆1283件</p>
+          <div class="z-middle-setkill-item-content">
+            <div>
+              <img src="../img/z3.jpg" alt="">
+            </div>
+            <div>
+              <img src="../img/z4.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="z-middle-setkill-item">
+          <p class="z-middle-setkill-span-one">止痒祛痱粉<span>人气榜</span></p>
+          <p class="z-middle-setkill-span-two">本周趋势上升161%</p>
+          <div class="z-middle-setkill-item-content">
+            <div>
+              <img src="../img/z5.jpg" alt="">
+            </div>
+            <div>
+              <img src="../img/z6.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="z-middle-setkill-item">
+          <p class="z-middle-setkill-span-one">宝妈推荐洗护榜<span>趋势榜</span></p>
+          <p class="z-middle-setkill-span-two">本周趋势上升72%</p>
+          <div class="z-middle-setkill-item-content">
+            <div>
+              <img src="../img/z7.jpg" alt="">
+            </div>
+            <div>
+              <img src="../img/z8.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="z-middle-setkill-item">
+          <p class="z-middle-setkill-span-one">甜蜜清凉冰激凌榜<span>人气榜</span></p>
+          <p class="z-middle-setkill-span-two">卖爆2.7万件</p>
+          <div class="z-middle-setkill-item-content">
+            <div>
+              <img src="../img/z9.jpg" alt="" style="width:61%">
+            </div>
+            <div>
+              <img src="../img/z10.jpg" alt="" style="width:76.5%">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 中部的猜你喜欢标题 -->
+      <div class="z-moddle-bar-list-box">
+        <img src="../img/z11.png" alt="">
+      </div>
       <!-- 中部的商品列表部分 -->
       <div class="z-moddle-goods-list-all">
         <div class="z-moddle-goods-list-one">
@@ -301,13 +424,22 @@ export default {
       itemIndex:0,
       LiveHeart:"false", //猜你喜欢图标的出现和消失
       scroll: '' ,    //滚动条高度
-      // 轮播图
+      // 轮播图第一次
       swiperOptions: {
         loop:true,
         autoplay:true,
         pagination: {
           el: '.swiper-pagination',
-          // type : 'custom'
+        },
+      },
+      // 轮播图第二次
+      swiperOptionsTwo: {
+        // direction: 'vertical',
+        loop:true,
+        autoplay:true,
+        pagination: {
+          el: '.swiper-paginationTwo',
+          type : 'custom',
         },
       },
       //第一个轮播图数据
@@ -581,6 +713,10 @@ export default {
 }
 </script>
 <style scoped>
+    a{
+      -webkit-tap-highlight-color:transparent;
+      text-decoration: none;
+    }
     .z-home{
       width: 100%;
       height: 100%;
@@ -859,97 +995,265 @@ export default {
       flex-wrap: wrap ;
       padding: 10px 17px;
     }
-    .z-middle-InterestFree-list-two{
+    .z-middle-InterestFree-list a{
+      display: block;
       width: 25%;
+      padding-left: 5px;
+      margin-bottom: 6px;
+    }
+    .z-middle-InterestFree-list-p{
+      color: #fffff0;
+      font-size: 13.8px;
+    }
+    .z-middle-InterestFree-list-two{
+      width: 100%;
       background-image: url(../img/156937739813037156.png);
       background-repeat:no-repeat;
-      background-size:100% 100%;
-      margin-top: 8px;
+      background-size:100% 100%;;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 8px;
     }
     .z-middle-InterestFree-list-two img{
-      width: 100%;
+      width: 86%;
+      margin-bottom: 10px;
+    }
+    .z-middle-InterestFree-list-p-two{
+      color: #a42ae0;
+      font-size: 12px;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 1px 5px;
     }
     .z-middle-InterestFree-list-one{
-      width: 25%;
+      width: 100%;
       background-image: url(../img/156937734114433686.png);
       background-repeat:no-repeat;
       background-size:100% 100%;
-      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 8px;
     }
     .z-middle-InterestFree-list-one img{
-      width: 100%;
+      width: 86%;
+      margin-bottom: 10px;
+    }
+    .z-middle-InterestFree-list-p-one{
+      color: #e244aa;
+      font-size: 12px;
+      display: block;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 1px 5px;
     }
     .z-middle-InterestFree-list-three{
-      width: 25%;
-      width: 25%;
+      width: 100%;
       background-image: url(../img/156937745215012117.png);
       background-repeat:no-repeat;
       background-size:100% 100%;
-      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 8px;
     }
     .z-middle-InterestFree-list-three img{
-      width: 100%;
+      width: 86%;
+      margin-bottom: 10px;
+    }
+    .z-middle-InterestFree-list-p-three{
+      color: #fba600;
+      font-size: 12px;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 1px 5px;
     }
     .z-middle-InterestFree-list-four{
-      width: 25%;
-      width: 25%;
+      width: 100%;
       background-image: url(../img/156937751450457739.png);
       background-repeat:no-repeat;
       background-size:100% 100%;
-      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 8px;
     }
     .z-middle-InterestFree-list-four img{
-      width: 100%;
+      width: 86%;
+      margin-bottom: 10px;
+    }
+    .z-middle-InterestFree-list-p-four{
+      color: #4ba093;
+      font-size: 12px;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 1px 5px;
     }
     .z-middle-InterestFree-list-five{
-      width: 25%;
-      width: 25%;
+      width: 100%;
       background-image: url(../img/156937734114433686.png);
       background-repeat:no-repeat;
       background-size:100% 100%;
-      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 8px;
     }
     .z-middle-InterestFree-list-five img{
-      width: 100%;
+      width: 86%;
+      margin-bottom: 10px;
+    }
+    .z-middle-InterestFree-list-p-five{
+      color: #e244aa;
+      font-size: 12px;
     }
     .z-middle-InterestFree-list-six{
-      width: 25%;
-      width: 25%;
+      width: 100%;
       background-image: url(../img/156937739813037156.png);
       background-repeat:no-repeat;
       background-size:100% 100%;
-      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 8px;
     }
     .z-middle-InterestFree-list-six img{
-      width: 100%;
+      width: 86%;
+      margin-bottom: 10px;
     }
     .z-middle-InterestFree-list-seven{
-      width: 25%;
-      width: 25%;
+      width: 100%;
       background-image: url(../img/156937745215012117.png);
       background-repeat:no-repeat;
       background-size:100% 100%;
-      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 8px;
     }
     .z-middle-InterestFree-list-seven img{
-      width: 100%;
+      width: 86%;
+      margin-bottom: 10px;
     }
     .z-middle-InterestFree-list-eight{
-      width: 25%;
-      width: 25%;
+      width: 100%;
       background-image: url(../img/156937751450457739.png);
       background-repeat:no-repeat;
       background-size:100% 100%;
-      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;  
+      padding-bottom: 8px;
     }
     .z-middle-InterestFree-list-eight img{
+      width: 86%;
+      margin-bottom: 10px;
+    }
+    /* 中部推荐榜单 */
+    .z-middle-recommended-title{
       width: 100%;
+      height: 50%;
+    }
+    .z-middle-recommended-list-content{
+      display: flex;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .z-middle-recommended-list-item{
+      flex-grow: 1;
+      width: 100%;
+      display: flex;
+      /* flex-direction: column; */
+      align-items: center;
+      justify-content: center;
+      padding: 2px 1px;
+    }
+    .z-middle-recommended-item-img-Bigbox{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #fff;
+      background-image: url(../img/sRecommendedBackgroundOne.png);
+      background-repeat: no-repeat;
+      background-size: 100% 35%;
+      background-position:bottom;
+      padding: 2px 5px 5px;
+    }
+    .z-middle-recommended-item-img-Bigbo-swiper{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #fff;
+      background-image: url(../img/sRecommendedBackgroundTwo.png);
+      background-repeat: no-repeat;
+      background-size: 100% 35%;
+      background-position:bottom;
+      padding: 2px 5px 5px;
+      width: 100%;
+    }
+    .z-middle-recommended-item-img-Bigbo-swiper span{
+      color: #d9a87a;
+      font-size: 12.4px;
+      display: block;
+      border: 1px solid #d9a87a;
+      border-radius: 10px;
+      padding: 1px 10px;
+      background-color: #fff;
+    }
+    .z-middle-recommended-item-img-box{
+      width: 100%;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      padding-top: 8px;
+    }
+    .z-middle-recommended-item-img{
+      width: 68%;
+    }
+    .z-middle-recommended-item-img-Bigbox span{
+      color: #d9a87a;
+      font-size: 12.4px;
+      display: block;
+      border: 1px solid #d9a87a;
+      border-radius: 10px;
+      padding: 1px 10px;
+      background-color: #fff;
+    }
+    .z-middle-recommended-item-pOne{
+      font-size: 13.8px;
+      color: #fff;
+    }
+    .z-middle-recommended-item-pTwo{
+      font-size: 12px;
+      color: #fff;
+    }
+    .z-middle-recommended-item-BigboxImg{
+      width: 100%;
+    }
+    .z-middle-recommended-list-item-swipe{
+      flex-grow: 1;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0px 5px;
+    }
+    /* 猜你喜欢最后一栏商品 */
+    .z-middle-setkill-item span{
+      color: #ab813a;
+      font-size: 12px;
+      padding-left: 8px;
     }
     /* 中部的猜你喜欢页面部分 */
     .z-moddle-bar-list-box{
-      width: 100%;
-      /* height: 1600px; */
+      padding-top: 20px;
     }
+    .z-moddle-bar-list-box img{
+      width: 100%;
+    }
+
     /* 中部的商品列表部分 */
     .z-moddle-goods-list-all{
       width: 100%;
