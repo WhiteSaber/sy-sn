@@ -120,6 +120,9 @@
                         </a>
                     </li>
                 </div>
+                <div class="last-btn">
+                    <a href="https://c.m.suning.com/snjdyq.html">进入手机频道</a>
+                </div>
             </ul>
         </div>
     </div>
@@ -425,6 +428,25 @@ export default {
 
 .item-name
 {
+    text-align: center;
+}
+
+.last-btn
+{
+    width:260px;
+    height:33px;
+    margin:19px 0 39px;
+}
+
+.last-btn a
+{
+    display:block;
+    width:256px;
+    height:33px;
+    border:1px solid #ddd;
+    border-radius: 6px;
+    color:#222;
+    line-height: 33px;
     text-align: center;
 }
 </style>

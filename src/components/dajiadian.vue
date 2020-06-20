@@ -1,8 +1,8 @@
 <template>
     <div>
-        <div class="s-select-view">
+        <div class="s-select-view" id="s-select-view">
             <div class="s-select-content">
-                <div class="title-wrap">
+                <div class="s-title-wrap" id="s-select-list">
                     <ul>
                         <div v-for="(item,index) in titleList" :key="item" @click="changeItem(index)">
                             <li v-if="myIndex==index" class="orangeRow">{{item}}</li>
@@ -10,45 +10,50 @@
                         </div>
                     </ul>
                 </div>
-
+            </div>
+            <ul class="s-item-list">
                 <div class="s-selected-item">
                     <div class="s-item-title">
                         <span>空调</span>
                     </div>
                 </div>
-            </div>
-            <ul class="s-item-list">
                 <div class="item-box">
                     <li v-for="item in firstRow" :key="item.name">
                         <a :href="'https://m.suning.com/search/'+item.name+'/'">
                             <div class="item-img">
                                 <img :src="item.src">
                             </div>
+                            <div class="item-name">{{item.name}}</div>
                         </a>
                     </li>
                 </div>
+
                 <div class="item-box">
                     <li v-for="item in secondRow" :key="item.name">
                         <a :href="'https://m.suning.com/search/'+item.name+'/'">
                             <div class="item-img">
                                 <img :src="item.src">
                             </div>
+                            <div class="item-name">{{item.name}}</div>
                         </a>
                     </li>
                 </div>
+
                 <div class="item-box">
                     <li v-for="item in thirdRow" :key="item.name">
                         <a :href="'https://m.suning.com/search/'+item.name+'/'">
                             <div class="item-img">
                                 <img :src="item.src">
                             </div>
-                            <div class="s-selected-item">
-                                <div class="s-item-title">
-                                    <span>冰箱</span>
-                                </div>
-                            </div>
+                            <div class="item-name">{{item.name}}</div>
                         </a>
                     </li>
+                </div>
+
+                <div class="s-selected-item">
+                    <div class="s-item-title">
+                        <span>冰箱</span>
+                    </div>
                 </div>
                 <div class="item-box">
                     <li v-for="item in fourthRow" :key="item.name">
@@ -56,17 +61,18 @@
                             <div class="item-img">
                                 <img :src="item.src">
                             </div>
-                            
+                            <div class="item-name">{{item.name}}</div>
                         </a>
                     </li>
                 </div>
+
                 <div class="item-box">
                     <li v-for="item in fifthRow" :key="item.name">
                         <a :href="'https://m.suning.com/search/'+item.name+'/'">
                             <div class="item-img">
                                 <img :src="item.src">
                             </div>
-                            
+                            <div class="item-name">{{item.name}}</div>
                         </a>
                     </li>
                 </div>
@@ -81,6 +87,12 @@
                         </a>
                     </li>
                 </div>
+
+                <div class="s-selected-item">
+                    <div class="s-item-title">
+                        <span>洗衣机</span>
+                    </div>
+                </div>
                 <div class="item-box">
                     <li v-for="item in seventhRow" :key="item.name">
                         <a :href="'https://m.suning.com/search/'+item.name+'/'">
@@ -91,6 +103,7 @@
                         </a>
                     </li>
                 </div>
+
                 <div class="item-box">
                     <li v-for="item in eighthRow" :key="item.name">
                         <a :href="'https://m.suning.com/search/'+item.name+'/'">
@@ -101,6 +114,12 @@
                         </a>
                     </li>
                 </div>
+
+                <div class="s-selected-item">
+                    <div class="s-item-title">
+                        <span>电视</span>
+                    </div>
+                </div>
                 <div class="item-box">
                     <li v-for="item in ninthRow" :key="item.name">
                         <a :href="'https://m.suning.com/search/'+item.name+'/'">
@@ -110,6 +129,129 @@
                             <div class="item-name">{{item.name}}</div>
                         </a>
                     </li>
+                </div>
+                <div class="item-box">
+                    <li v-for="item in tenthRow" :key="item.name">
+                        <a :href="'https://m.suning.com/search/'+item.name+'/'">
+                            <div class="item-img">
+                                <img :src="item.src">
+                            </div>
+                            <div class="item-name">{{item.name}}</div>
+                        </a>
+                    </li>
+                </div>
+                <div class="item-box">
+                    <li v-for="item in eleventhRow" :key="item.name">
+                        <a :href="'https://m.suning.com/search/'+item.name+'/'">
+                            <div class="item-img">
+                                <img :src="item.src">
+                            </div>
+                            <div class="item-name">{{item.name}}</div>
+                        </a>
+                    </li>
+                </div>
+
+                <div class="s-selected-item">
+                    <div class="s-item-title">
+                        <span>集成家电</span>
+                    </div>
+                </div>
+                <div class="item-box">
+                    <li v-for="item in twelfthRow" :key="item.name">
+                        <a :href="'https://m.suning.com/search/'+item.name+'/'">
+                            <div class="item-img">
+                                <img :src="item.src">
+                            </div>
+                            <div class="item-name">{{item.name}}</div>
+                        </a>
+                    </li>
+                </div>
+                <div class="item-box">
+                    <li v-for="item in thirteenthRow" :key="item.name">
+                        <a :href="'https://m.suning.com/search/'+item.name+'/'">
+                            <div class="item-img">
+                                <img :src="item.src">
+                            </div>
+                            <div class="item-name">{{item.name}}</div>
+                        </a>
+                    </li>
+                </div>
+
+                <div class="s-selected-item">
+                    <div class="s-item-title">
+                        <span>商用电器</span>
+                    </div>
+                </div>
+                <div class="item-box">
+                    <li v-for="item in forteenthRow" :key="item.name">
+                        <a :href="'https://m.suning.com/search/'+item.name+'/'">
+                            <div class="item-img">
+                                <img :src="item.src">
+                            </div>
+                            <div class="item-name">{{item.name}}</div>
+                        </a>
+                    </li>
+                </div>
+
+                <div class="item-box">
+                    <li v-for="item in fifteenthRow" :key="item.name">
+                        <a :href="'https://m.suning.com/search/'+item.name+'/'">
+                            <div class="item-img">
+                                <img :src="item.src">
+                            </div>
+                            <div class="item-name">{{item.name}}</div>
+                        </a>
+                    </li>
+                </div>
+                <div class="item-box">
+                    <li v-for="item in sixteenthRow" :key="item.name">
+                        <a :href="'https://m.suning.com/search/'+item.name+'/'">
+                            <div class="item-img">
+                                <img :src="item.src">
+                            </div>
+                            <div class="item-name">{{item.name}}</div>
+                        </a>
+                    </li>
+                </div>
+
+                <div class="s-selected-item">
+                    <div class="s-item-title">
+                        <span>推荐品牌</span>
+                    </div>
+                </div>
+                <div class="item-box">
+                    <li v-for="item in seventeenthRow" :key="item.name">
+                        <a :href="'https://m.suning.com/search/'+item.name+'/'">
+                            <div class="item-img">
+                                <img :src="item.src">
+                            </div>
+                            <div class="item-name">{{item.name}}</div>
+                        </a>
+                    </li>
+                </div>
+                <div class="item-box">
+                    <li v-for="item in eighteenthRow" :key="item.name">
+                        <a :href="'https://m.suning.com/search/'+item.name+'/'">
+                            <div class="item-img">
+                                <img :src="item.src">
+                            </div>
+                            <div class="item-name">{{item.name}}</div>
+                        </a>
+                    </li>
+                </div>
+                <div class="item-box">
+                    <li v-for="item in ninteenthRow" :key="item.name">
+                        <a :href="'https://m.suning.com/search/'+item.name+'/'">
+                            <div class="item-img">
+                                <img :src="item.src">
+                            </div>
+                            <div class="item-name">{{item.name}}</div>
+                        </a>
+                    </li>
+                </div>
+
+                <div class="last-btn">
+                    <a href="https://c.m.suning.com/snjdyq.html">进入家电频道</a>
                 </div>
             </ul>
         </div>
@@ -126,147 +268,310 @@ export default {
             firstRow:
             [
                 {
-                    name:"apple",
-                    src:require("../assets/s-apple.jpg"),
+                    name:"空调挂机",
+                    src:require("../assets/s-kongtiaoguaji.jpg"),
                 },
                 {
-                    name:"huawei",
-                    src:require("../assets/s-huawei.jpg"),
+                    name:"空调柜机",
+                    src:require("../assets/s-kongtiaoguiji.png"),
                 },
                 {
-                    name:"vivo",
-                    src:require("../assets/s-vivo.jpg"),
+                    name:"移动空调",
+                    src:require("../assets/s-yidongkongtiao.png"),
                 },
             ],
 
             secondRow:
             [
                 {
-                name:"honor",
-                src:require("../assets/s-honor.jpg"),
+                name:"风管机",
+                src:require("../assets/s-fengguanji.jpg"),
                 },
                 {
-                    name:"xiaomi",
-                    src:require("../assets/s-xiaomi.jpg"),
+                    name:"多联机",
+                    src:require("../assets/s-duolianji.jpg"),
                 },
                 {
-                    name:"oppo",
-                    src:require("../assets/s-oppo.jpg"),
+                    name:"一级能效",
+                    src:require("../assets/s-yijinengxiao.jpg"),
                 },
             ],
 
             thirdRow:
             [
                 {
-                    name:"realme",
-                    src:require("../assets/s-realme.png"),
+                    name:"空调以旧换新",
+                    src:require("../assets/s-kongtiaoyijiuhuanxin.png"),
                 },
                 {
-                    name:"samsung",
-                    src:require("../assets/s-sumsung.jpg"),
+                    name:"空调零元安装",
+                    src:require("../assets/s-kongtiaolingyuananzhuang.png"),
                 },
                 {
-                    name:"iqoo",
-                    src:require("../assets/s-iqoo.jpg"),
+                    name:"空调免息",
+                    src:require("../assets/s-kongtiaomianxi.jpg"),
                 },
             ],
 
             fourthRow:
             [
                 {
-                    name:"yijia",
-                    src:require("../assets/s-yijia.jpg"),
+                    name:"冰箱",
+                    src:require("../assets/s-bingxiang.jpg"),
                 },
                 {
-                    name:"鹿客",
-                    src:require("../assets/s-loock.jpg"),
+                    name:"对开门冰箱",
+                    src:require("../assets/s-duikaimenbingxiang.jpg"),
                 },
                 {
-                    name:"小天才",
-                    src:require("../assets/s-xiaotiancai.jpg"),
+                    name:"多门冰箱",
+                    src:require("../assets/s-duomenbingxiang.jpg"),
                 },
             ],
 
             fifthRow:
             [
                 {
-                    name:"大疆创新",
-                    src:require("../assets/s-dajiangchuangxin.png"),
+                    name:"十字对开门冰箱",
+                    src:require("../assets/s-shiziduikaimenbingxiang.jpg"),
                 },
                 {
-                    name:"bose",
-                    src:require("../assets/s-bose.jpg"),
+                    name:"三门冰箱",
+                    src:require("../assets/s-sanmenbingxiang.jpg"),
                 },
                 {
-                    name:"步步高",
-                    src:require("../assets/s-bubugao.jpg"),
+                    name:"双门冰箱",
+                    src:require("../assets/s-shuangmenbingxiang.jpg"),
                 },
             ],
 
             sixthRow:
             [
                 {
-                    name:"全部手机",
-                    src:require("../assets/s-quanbushouji.jpg"),
+                    name:"冷柜",
+                    src:require("../assets/s-lenggui.jpg"),
                 },
                 {
-                    name:"5g手机",
-                    src:require("../assets/s-5gshouji.jpg"),
+                    name:"商用冷柜",
+                    src:require("../assets/s-shangyonglenggui.jpg"),
                 },
                 {
-                    name:"全面屏手机",
-                    src:require("../assets/s-quanmianpingshouji.jpg"),
+                    name:"红酒柜",
+                    src:require("../assets/s-hongjiugui.png"),
                 },
             ],
             
             seventhRow:
             [
                 {
-                    name:"游戏手机",
-                    src:require("../assets/s-youxishouji.jpg"),
+                    name:"洗干一体机",
+                    src:require("../assets/s-xiganyitiji.jpg"),
                 },
                 {
-                    name:"老人机",
-                    src:require("../assets/s-laorenji.jpg"),
+                    name:"滚筒洗衣机",
+                    src:require("../assets/s-guntongxiyiji.jpg"),
                 },
                 {
-                    name:"拍照手机",
-                    src:require("../assets/s-paizhaoshouji.jpg"),
+                    name:"波轮洗衣机",
+                    src:require("../assets/s-bolunxiyiji.jpg"),
                 },
             ],
 
             eighthRow:
             [
                 {
-                    name:"指纹手机",
-                    src:require("../assets/s-zhiwenshouji.jpg"),
+                    name:"大容量洗衣机",
+                    src:require("../assets/s-darongliangxiyiji.jpg"),
                 },
                 {
-                    name:"面部识别手机",
-                    src:require("../assets/s-mianbushibieshouji.jpg"),
+                    name:"迷你洗衣机",
+                    src:require("../assets/s-minixiyiji.jpg"),
                 },
                 {
-                    name:"女性手机",
-                    src:require("../assets/s-nvxingshouji.jpg"),
+                    name:"烘干机",
+                    src:require("../assets/s-hongganji.png"),
                 },
             ],
 
             ninthRow:
             [
                 {
-                    name:"长续航手机",
-                    src:require("../assets/s-changxuhangshouji.jpg"),
+                    name:"电视",
+                    src:require("../assets/s-dianshiji.jpg"),
                 },
                 {
-                    name:"以旧换新手机",
-                    src:require("../assets/s-yijiuhuanxin.jpg"),
+                    name:"55吋电视机",
+                    src:require("../assets/s-55cundianshiji.jpg"),
                 },
                 {
-                    name:"手机维修",
-                    src:require("../assets/s-shoujiweixiu.png"),
+                    name:"全面屏电视机",
+                    src:require("../assets/s-quanmianpingjianshiji.jpg"),
                 },
             ],
-            myIndex:0
+
+            tenthRow:
+            [
+                {
+                    name:"65吋电视机",
+                    src:require("../assets/s-65cundianshiji.jpg"),
+                },
+                {
+                    name:"4K电视机",
+                    src:require("../assets/s-4kdianshiji.png"),
+                },
+                {
+                    name:"教育电视",
+                    src:require("../assets/s-jiaoyudianshi.jpg"),
+                },
+            ],
+
+            eleventhRow:
+            [
+                {
+                    name:"家庭影院",
+                    src:require("../assets/s-jiatingyingyuan.jpg"),
+                },
+                {
+                    name:"智慧屏",
+                    src:require("../assets/s-zhihuiping.jpg"),
+                },
+                {
+                    name:"投影仪",
+                    src:require("../assets/s-touyingyi.jpg"),
+                },
+            ],
+
+            twelfthRow:
+            [
+                {
+                    name:"壁挂式新风",
+                    src:require("../assets/s-biguashixinfeng.jpg"),
+                },
+                {
+                    name:"吊顶式新风",
+                    src:require("../assets/s-diaodingshixinfeng.jpg"),
+                },
+                {
+                    name:"前置过滤器",
+                    src:require("../assets/s-qianzhiguolvqi.jpg"),
+                },
+            ],
+
+            thirteenthRow:
+            [
+                {
+                    name:"空气能热水器",
+                    src:require("../assets/s-kongqinengreshuiqi.jpg"),
+                },
+                {
+                    name:"壁挂炉",
+                    src:require("../assets/s-bigualu.jpg"),
+                },
+                {
+                    name:"全屋净水",
+                    src:require("../assets/s-quanwujingshui.jpg"),
+                },
+            ],
+
+            forteenthRow:
+            [
+                {
+                    name:"商用发酵机",
+                    src:require("../assets/s-shangyongfaxiaoji.jpg"),
+                },
+                {
+                    name:"商用展示柜",
+                    src:require("../assets/s-shangyongzhanshigui.jpg"),
+                },
+                {
+                    name:"商用冰柜",
+                    src:require("../assets/s-shangyongbinggui.jpg"),
+                },
+            ],
+
+            fifteenthRow:
+            [
+                {
+                    name:"商用冰箱",
+                    src:require("../assets/s-shangyongbingxiang.jpg"),
+                },
+                {
+                    name:"商用冷柜",
+                    src:require("../assets/s-shangyongchufanglenggui.jpg"),
+                },
+                {
+                    name:"商用制冰机",
+                    src:require("../assets/s-shangyongzhibingji.jpg"),
+                },
+            ],
+
+            sixteenthRow:
+            [
+                {
+                    name:"商用电烤箱",
+                    src:require("../assets/s-shangyongdiankaoxiang.jpg"),
+                },
+                {
+                    name:"天花机",
+                    src:require("../assets/s-tianhuaji.jpg"),
+                },
+                {
+                    name:"商用柜机",
+                    src:require("../assets/s-shangyongguiji.jpg"),
+                },
+            ],
+
+            seventeenthRow:
+            [
+                {
+                    name:"美的",
+                    src:require("../assets/s-meidi.jpg"),
+                },
+                {
+                    name:"海尔",
+                    src:require("../assets/s-haier.jpg"),
+                },
+                {
+                    name:"创维",
+                    src:require("../assets/s-chuangwei.jpg"),
+                },
+            ],
+
+            eighteenthRow:
+            [
+                {
+                    name:"TCL",
+                    src:require("../assets/s-tcl.jpg"),
+                },
+                {
+                    name:"奥克斯",
+                    src:require("../assets/s-aokesi.jpg"),
+                },
+                {
+                    name:"格力",
+                    src:require("../assets/s-geli.jpg"),
+                },
+            ],
+
+            ninteenthRow:
+            [
+                {
+                    name:"海信",
+                    src:require("../assets/s-haixin.jpg"),
+                },
+                {
+                    name:"西门子",
+                    src:require("../assets/s-ximenzi.jpg"),
+                },
+                {
+                    name:"康佳",
+                    src:require("../assets/s-kangjia.jpg"),
+                },
+            ],
+
+            myIndex:6,
+            myScrollX:"",
+            myScrollY:""
         }
     },
 
@@ -275,9 +580,98 @@ export default {
         changeItem(index)
         {
             this.myIndex=index;
+        },
+        
+        moveX()
+        {
+            this.myScrollX=document.getElementById("s-select-list").scrollLeft;
+        },
+        
+        moveY()
+        {
+            this.myScrollY=document.getElementById("s-select-view").scrollTop;
+        }
+    },
+
+    mounted()
+    {
+        document.getElementById("s-select-list").addEventListener('scroll',this.moveX);
+        document.getElementById("s-select-view").addEventListener('scroll',this.moveY);
+    },
+    watch:
+    {
+        myIndex(newVal)
+        {
+            if(newVal==0)
+            {
+                document.getElementById("s-select-view").scrollTop=0;
+                document.getElementById("s-select-list").scrollLeft=0;
+            }
+            else if(newVal==1)
+            {
+                document.getElementById("s-select-view").scrollTop=331;
+                document.getElementById("s-select-list").scrollLeft=0;
+            }
+            else if(newVal==2)
+            {
+                document.getElementById("s-select-view").scrollTop=663;
+                document.getElementById("s-select-list").scrollLeft=0;
+            }
+            else if(newVal==3)
+            {
+                document.getElementById("s-select-view").scrollTop=902;
+                document.getElementById("s-select-list").scrollLeft=44;
+            }
+            else if(newVal==4)
+            {
+                document.getElementById("s-select-view").scrollTop=1233;
+                document.getElementById("s-select-list").scrollLeft=98;
+            }
+            else if(newVal==5)
+            {
+                document.getElementById("s-select-view").scrollTop=1469;
+                document.getElementById("s-select-list").scrollLeft=140;
+            }
+            else if(newVal==6)
+            {
+                document.getElementById("s-select-view").scrollTop=1589;
+                
+            }
+        },
+
+        myScrollY(oldVal)
+        {
+            if(oldVal<311)
+            {
+                this.myIndex=0;
+            };
+            if(oldVal>=331)
+            {
+                this.myIndex=1;
+            };
+            if(oldVal>=663 && oldVal<902)
+            {
+                this.myIndex=2;
+            };
+            if(oldVal>=902 && oldVal<1233)
+            {
+                this.myIndex=3;
+            };
+            if(oldVal>=1233 && oldVal<1469)
+            {
+                this.myIndex=4;
+            };
+            if(oldVal>=1469 && oldVal<1580)
+            {
+                this.myIndex=5;
+            };
+            if(oldVal>=1580)
+            {
+                this.myIndex=6;
+            }
         }
     }
-}
+};
 </script>
 
 <style scoped>
@@ -299,22 +693,23 @@ export default {
     background:#fff;
 }
 
-.title-wrap
+.s-title-wrap
 {
     width:260px;
     height:38px;
     overflow: auto;
-    z-index:999
+    z-index:999;
+    position:fixed;
 }
 
-.title-wrap ul
+.s-title-wrap ul
 {
     width:400px;
     height:38px;
     background: #fff;
 }
 
-.title-wrap li
+.s-title-wrap li
 {
     width:auto;
     height:38px;
@@ -347,6 +742,7 @@ export default {
     float:left;
     font-size:12px;
     line-height:12px;
+    
 }
 
 .s-item-list
@@ -354,6 +750,7 @@ export default {
     display:flex;
     flex-direction: column;
     list-style-type: none;
+    margin-top:38px;
 }
 
 .item-box
@@ -413,5 +810,24 @@ export default {
     height:3px;
     border-radius: 4px;
     background: #fc0;
+}
+
+.last-btn
+{
+    width:260px;
+    height:33px;
+    margin:19px 0 39px;
+}
+
+.last-btn a
+{
+    display:block;
+    width:256px;
+    height:33px;
+    border:1px solid #ddd;
+    border-radius: 6px;
+    color:#222;
+    line-height: 33px;
+    text-align: center;
 }
 </style>
