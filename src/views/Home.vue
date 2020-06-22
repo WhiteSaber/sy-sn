@@ -2,12 +2,12 @@
   <div class="z-home">
     <!-- 顶部栏有消失和出现,开始是消失的 -->
     <div class="z-top-bar" v-if="scroll > 900">
-      <img src="../img/分类.png" alt="" @click="topBarImg">
+      <img src="../img/sort.png" alt="" @click="topBarImg">
       <div class="z-top-bar-item">
-          <img src="../img/搜索.png" alt="">
+          <img src="../img/search.png" alt="">
           <div>爆款好货5折开抢</div>
       </div>
-      <img src="../img/登录.png" alt="" @click="topSignIn">
+      <img src="../img/login.png" alt="" @click="topSignIn">
     </div>
     
     <!-- 中部 -->
@@ -16,12 +16,12 @@
       <div class="z-moddle-bar-list">
         <div class="z-moddle-bar-list-bigBox">
           <div class="z-middle-bar-list-item">
-            <img src="../img/分类.png" alt="" @click="topBarImg">
+            <img src="../img/sort.png" alt="" @click="topBarImg">
             <img src="../img/159237517720211281.gif" alt="" class="z-middle-bar-list-item-img-two">
-            <img src="../img/登录.png" alt="" @click="topSignIn">
+            <img src="../img/login.png" alt="" @click="topSignIn">
           </div>
           <div class="z-middle-bar-list-item-one">
-            <img src="../img/搜索.png" alt="">
+            <img src="../img/search.png" alt="">
             <div>爆款好货5折开抢</div>
           </div>
         </div>
@@ -387,19 +387,19 @@
           <div style="color:#000000;font-weight:bold">首页</div>
         </div>
         <div class="z-bottom-item" @click="itemChange(1)">
-          <img src="../img/放大镜白.png" alt="">
+          <img src="../img/fangdajing-w.png" alt="">
           <div>分类</div>
         </div>
         <div class="z-bottom-item" @click="itemChange(2)">
-          <img src="../img/清单白.png" alt="">
+          <img src="../img/qingdan-w.png" alt="">
           <div>必抢清单</div>
         </div>
         <div class="z-bottom-item" @click="itemChange(3)">
-          <img src="../img/购物车白.png" alt="" >
+          <img src="../img/gouwuche-w.png" alt="" >
           <div>购物车</div>
         </div>
         <div class="z-bottom-item" @click="itemChange(4)">
-          <img src="../img/易购白.png" alt="">
+          <img src="../img/yigou-w.png" alt="">
           <div>我的易购</div>
         </div>
     </div>
