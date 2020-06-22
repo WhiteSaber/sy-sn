@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div >
         <div class="z-middle-bar">
             <div class="login-content">
                 <div class="top">
@@ -316,6 +316,15 @@ export default {
                 }
                 });
             }
+            
+            
+        }
+    },
+    computed:
+    {
+        isLogin()
+        {
+          return this.$store.state.loginBool;
         }
     }
 }

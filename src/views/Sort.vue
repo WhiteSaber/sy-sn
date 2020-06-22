@@ -5,7 +5,7 @@
             <div class="s-left-wrap">
                 商品分类
             </div>
-            <div class="s-right-wrap">
+            <div class="s-right-wrap" @click="enterSearch">
                 <a>爆款好货5折开抢</a>
             </div>
         </div>
@@ -93,6 +93,9 @@ export default {
           }
         });
       }
+      if(this.itemIndex == 2){
+        window.location.href='https://c.m.suning.com/channel/higoubq11.html?safp=f73ee1cf.wapindex7.113464329889.3&safpn=10001';
+      };
       if (this.itemIndex == 3) {
         this.$router.push({
           path: "/shoppingCart",
@@ -109,6 +112,16 @@ export default {
           }
         });
       }
+    },
+
+    enterSearch()
+    {
+      this.$router.push({
+        path: "/search",
+        query: {
+          name:"search"
+        }
+      });
     }
   },
   components:

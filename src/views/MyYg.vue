@@ -17,14 +17,14 @@
                 <span class="c-content-title">欢迎登录苏宁易购</span>
             </div>
             <!-- 账号密码登录版 -->
-            <div v-if="flag=='true'">
+            <div v-if="flag==true">
                 <!-- 内容 - 中段 -->
                 <div class="c-content-two">
                     <label for="c-input-name"></label>
-                    <input type="text" id="c-input-name" class="c-content-input-name" placeholder="请输入手机号/用户名/邮箱" >
+                    <input type="text" id="c-input-name" class="c-content-input-name" placeholder="请输入手机号/用户名/邮箱"  v-model="userNumber">
                     <img src="../img/c-cha1.png" alt="#" class="c-content-two-icon1">
                     <label for="c-input-pwd"></label>
-                    <input type="password" id="c-input-pwd" class="c-content-input-pwd" placeholder="请输入密码" >
+                    <input type="password" id="c-input-pwd" class="c-content-input-pwd" placeholder="请输入密码" v-model="userPassword">
                     <img src="../img/c-cha1.png" alt="#" class="c-content-two-icon2" >
                     <img src="../img/c-close.png" alt="#" class="c-content-two-eye">
                     <a href="#" >忘记密码</a>
@@ -40,11 +40,11 @@
                 <!-- 内容 - 中段 -->
                 <div class="c-content-two" >
                     <label for="c-input-name"></label>
-                    <input type="text" id="c-input-name" class="c-content-input-name" placeholder="请输入手机号" >
+                    <input type="text" id="c-input-name" class="c-content-input-name" placeholder="请输入手机号">
                     <img src="../img/c-cha1.png" alt="#" class="c-content-two-icon3">
                     <div>
                         <label for="c-input-pwd"></label>
-                        <input type="password" id="c-input-pwd" class="c-content-input-pwd2" placeholder="请输入密码" >
+                        <input type="password" id="c-input-pwd" class="c-content-input-pwd2" placeholder="请输入验证码">
                         <a href="#"  class="c-but"><p>获取验证码</p></a>
                     </div>
                     <div class="c-prompt">未注册的手机号验证后自动注册</div>
@@ -87,27 +87,46 @@
 export default {
     data(){
         return {
-            flag:"false",
-           
+            flag:false,
+            userNumber:"",
+            userPassword:"",
         }
     },
     methods:{
         CSignIn(){
-            this.flag = "false"
+            this.flag = false
         },
         CSignIns(){
-            this.flag = "true"
+            this.flag = true
         },
         login()
         {
-            this.$router.push({
-            path:"/afterlogin",
-            query:{
-              name:"afterlogin"
+            for(let i=0;i<this.$store.state.loginData.length;i++)
+            {
+                if(this.userNumber==this.$store.state.loginData[i].phone && this.userPassword==this.$store.state.loginData[i].code)
+                {
+                    this.$router.push({
+                        path:"/afterlogin",
+                        query:{
+                          name:"afterlogin",
+                        }
+                    });
+                    this.$store.commit("changeLogin");
+                }
+                else
+                {
+                  alert("账号或密码有误，请重新输入!");
+                }
             }
-      });
-        }
         
+        }
+    },
+    computed:
+    {
+        isLogin()
+        {
+          return this.$store.state.loginBool;
+        }
     }
 }
 </script>
