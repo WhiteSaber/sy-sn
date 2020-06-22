@@ -15,46 +15,27 @@
                 <img src="../assets/forward.png">
             </div>
             
-            <div class="cart-item-container">
-                <div class="item">
-                    <div class="item-top">
-                        <span class="check-box">
-                            <input type="checkbox">
-                            <span class="check-box-2"></span>
-                        </span>
-                    </div>
-                    <div class="item-content">987654321</div>
-                </div>
+            <div class="cart-item-container" v-if="isLogin==true">
+                <div v-for="(item,index) in shoppingCartList" :key="item.name">
 
-                <div class="item">
-                    <div class="item-top">
-                        <span class="check-box">
-                            <input type="checkbox">
-                            <span class="check-box-2"></span>
-                        </span>
-                    </div>
-                    <div class="item-content">987654321</div>
-                </div>
+                  <div class="item">
+                      <div class="item-top">
+                          <span class="check-box check-checked" v-if="item.checked==true" @click="checkItem(index)">
+                              <input type="checkbox">
+                              <span class="check-box-2"></span>
+                          </span>
+                          <span class="check-box" v-else @click="checkItem(index)">
+                              <input type="checkbox" >
+                              <span class="check-box-2"></span>
+                          </span>
+                      </div>
+                      <div class="item-content">{{item.name}}</div>
+                      <div>{{item.price}}</div>
+                  </div>
 
-                <div class="item">
-                    <div class="item-top">
-                        <span class="check-box">
-                            <input type="checkbox">
-                            <span class="check-box-2"></span>
-                        </span>
-                    </div>
-                    <div class="item-content">987654321</div>
+                  
                 </div>
-
-                <div class="item">
-                    <div class="item-top">
-                        <span class="check-box">
-                            <input type="checkbox">
-                            <span class="check-box-2"></span>
-                        </span>
-                    </div>
-                    <div class="item-content">987654321</div>
-                </div>
+                
 
             </div>
 
@@ -90,7 +71,11 @@
         </div>
         <div class="pay">
             <div class="pay-check">
-                <span class="all-check-box">
+                <span class="all-check-box check-checked" v-if="allChecked==true" @click="wantAll">
+                    <input type="all-checkbox">
+                    <span class="all-check-box-2"></span>
+                </span>
+                <span class="all-check-box" v-else @click="wantAll">
                     <input type="all-checkbox">
                     <span class="all-check-box-2"></span>
                 </span>
@@ -98,7 +83,7 @@
             </div>
             <div class="pay-item">
                 <div class="money-box">
-                    <div class="all-price">合计：0.00</div>
+                    <div class="all-price">合计：{{allPrice}}</div>
                     <div class="post-price">含运费：0</div>
                 </div>
             </div>
@@ -110,23 +95,23 @@
     </div>
     <div class="z-bottom-bar">
         <div class="z-bottom-item" @click="itemChange(0)">
-          <img src="../img/房子白.png" alt="">
+          <img src="../img/fangzi-w.png" alt="">
           <div>首页</div>
         </div>
         <div class="z-bottom-item" @click="itemChange(1)">
-          <img src="../img/放大镜白.png" alt="">
+          <img src="../img/fangdajing-w.png" alt="">
           <div>分类</div>
         </div>
         <div class="z-bottom-item" @click="itemChange(2)">
-          <img src="../img/清单白.png" alt="">
+          <img src="../img/qingdan-w.png" alt="">
           <div>必抢清单</div>
         </div>
         <div class="z-bottom-item" @click="itemChange(3)">
-          <img src="../img/购物车.png" alt="" >
+          <img src="../img/gouwuche.png" alt="" >
           <div style="color:rgb(255,204,0);">购物车</div>
         </div>
         <div class="z-bottom-item" @click="itemChange(4)">
-          <img src="../img/易购白.png" alt="">
+          <img src="../img/yigou-w.png" alt="">
           <div>我的易购</div>
         </div>
     </div>
@@ -139,101 +124,118 @@ export default {
     data(){
       return {
         itemIndex:0,
-              goodsListOne:[
-                {
-                  name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
-                  img:require("../img/headset.png"),
-                  price:608
-                  
-                },
-                {
-                  name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
-                  img:require("../img/headset.png"),
-                  price:608
-                },
-                {
-                  name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
-                  img:require("../img/headset.png"),
-                  price:608
-                },
-                {
-                  name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
-                  img:require("../img/headset.png"),
-                  price:608
-                },
-                {
-                  name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
-                  img:require("../img/headset.png"),
-                  price:608
-                },
-                {
-                  name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
-                  img:require("../img/headset.png"),
-                  price:608
-                },
-                {
-                  name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
-                  img:require("../img/headset.png"),
-                  price:608
-                },
-                {
-                  name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
-                  img:require("../img/headset.png"),
-                  price:608
-                },
-                {
-                  name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
-                  img:require("../img/headset.png"),
-                  price:608
-                },
-              ],
-              goodsListTwo:[
-                {
-                  name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
-                  img:require("../img/headset.png"),
-                  price:608
-                },
-                {
-                  name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
-                  img:require("../img/headset.png"),
-                  price:608
-                },
-                {
-                  name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
-                  img:require("../img/headset.png"),
-                  price:608
-                },
-                {
-                  name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
-                  img:require("../img/headset.png"),
-                  price:608
-                },
-                {
-                  name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
-                  img:require("../img/headset.png"),
-                  price:608
-                },
-                {
-                  name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
-                  img:require("../img/headset.png"),
-                  price:608
-                },
-                {
-                  name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
-                  img:require("../img/headset.png"),
-                  price:608
-                },
-                {
-                  name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
-                  img:require("../img/headset.png"),
-                  price:608
-                },
-                {
-                  name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
-                  img:require("../img/headset.png"),
-                  price:608
-                },
-              ]
+        list:[],
+        allPrice:0.00,
+        allChecked:false,
+        goodsListOne:[
+          {
+            name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+            img:require("../img/headset.png"),
+            price:608
+            
+          },
+          {
+            name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+            img:require("../img/headset.png"),
+            price:608
+          },
+          {
+            name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+            img:require("../img/headset.png"),
+            price:608
+          },
+          {
+            name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+            img:require("../img/headset.png"),
+            price:608
+          },
+          {
+            name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+            img:require("../img/headset.png"),
+            price:608
+          },
+          {
+            name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+            img:require("../img/headset.png"),
+            price:608
+          },
+          {
+            name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+            img:require("../img/headset.png"),
+            price:608
+          },
+          {
+            name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+            img:require("../img/headset.png"),
+            price:608
+          },
+          {
+            name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+            img:require("../img/headset.png"),
+            price:608
+          },
+        ],
+        goodsListTwo:[
+          {
+            name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+            img:require("../img/headset.png"),
+            price:608
+          },
+          {
+            name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+            img:require("../img/headset.png"),
+            price:608
+          },
+          {
+            name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+            img:require("../img/headset.png"),
+            price:608
+          },
+          {
+            name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+            img:require("../img/headset.png"),
+            price:608
+          },
+          {
+            name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+            img:require("../img/headset.png"),
+            price:608
+          },
+          {
+            name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+            img:require("../img/headset.png"),
+            price:608
+          },
+          {
+            name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+            img:require("../img/headset.png"),
+            price:608
+          },
+          {
+            name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+            img:require("../img/headset.png"),
+            price:608
+          },
+          {
+            name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
+            img:require("../img/headset.png"),
+            price:608
+          },
+        ],
+
+        shoppingCartList:
+        [
+          {
+            name:"商品A",
+            price:10,
+            checked:false
+          },
+          {
+            name:"商品B",
+            price:20,
+            checked:false
+          },
+        ]
       }
     },
     methods:{
@@ -255,6 +257,9 @@ export default {
                 }
           });
         };
+        if(this.itemIndex == 2){
+          window.location.href='https://c.m.suning.com/channel/higoubq11.html?safp=f73ee1cf.wapindex7.113464329889.3&safpn=10001';
+        };
         if(this.itemIndex == 3){
           this.$router.push({
             path:"/shoppingCart",
@@ -271,7 +276,81 @@ export default {
                 }
           });
         };
+        if(this.itemIndex == 4 && this.isLogin==true){
+            this.$router.push({
+              path:"/afterlogin",
+              query:{
+                    name:"afterlogin"
+                  }
+            });
+          }
+      },
+      checkItem(index)
+      {
+        this.shoppingCartList[index].checked=!this.shoppingCartList[index].checked;
+        this.add();
+      },
+
+      add()
+      {
+        for(let i=0;i<this.shoppingCartList.length;i++)
+        {
+          if(this.shoppingCartList[i].checked==true && this.list.indexOf(this.shoppingCartList[i])==-1)
+          {
+            this.list.push(this.shoppingCartList[i]);
+          }
+          if(this.shoppingCartList[i].checked==false && this.list.indexOf(this.shoppingCartList[i])!==-1)
+          {
+            this.list.splice(this.list.indexOf(this.shoppingCartList[i]),1);
+          }
+        }
+      },
+
+      wantAll()
+      {
+        this.allChecked=!this.allChecked;
+        if(this.allChecked==true)
+        {
+          for(let i=0;i<this.shoppingCartList.length;i++)
+          {
+            this.shoppingCartList[i].checked=true;
+          }
+        }
+        else
+        {
+          for(let i=0;i<this.shoppingCartList.length;i++)
+          {
+            this.shoppingCartList[i].checked=false;
+          }
+        }
+        this.add();
       }
+    },
+    computed:
+    {
+      isLogin()
+      {
+        return this.$store.state.loginBool;
+      },
+    },
+    watch:
+    {
+      list()
+      {
+        this.allPrice=0.00;
+        if(this.list.length==this.shoppingCartList.length)
+        {
+          this.allChecked=true;
+        }
+        else
+        {
+          this.allChecked=false;
+        }
+        for(let i=0;i<this.list.length;i++)
+        {
+          this.allPrice+=this.list[i].price;
+        }
+      },
     }
 }
 </script>
@@ -293,6 +372,7 @@ export default {
     .z-home .z-bottom-bar{
       flex-shrink: 0;
       display: flex;
+      padding:5px 0;
     }
     .z-bottom-item{
       width: 100%;
