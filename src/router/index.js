@@ -26,6 +26,10 @@ Vue.use(VueRouter)
     path:'/afterlogin',
     component: () => import('../views/afterlogin.vue')
   },
+  {
+    path:'/commodity',
+    component: () => import('../views/commodity.vue')
+  },
   // {
   //   path: '/about',
   //   name: 'About',

@@ -348,7 +348,7 @@
       <!-- 中部的商品列表部分 -->
       <div class="z-moddle-goods-list-all">
         <div class="z-moddle-goods-list-one">
-          <div class="z-moddle-goods-list-item" v-for="(item,index) in goodsListOne" :key="index">
+          <div class="z-moddle-goods-list-item" v-for="(item,index) in goodsListOne" :key="index"  @click="goodsItemOne">
             <img :src="item.img" class="z-moddle-goods-img">
             <p class="z-goods-content">{{item.name}}</p>
             <P></P>
@@ -703,6 +703,15 @@ export default {
         query:{
           name:4
         }
+      });
+    },
+    // 商品详情点跳转第一页
+    goodsItemOne(){
+      this.$router.push({
+        path:"/commodity",
+        query:{
+              name:"commodity"
+            }
       });
     }
   },
@@ -1325,6 +1334,7 @@ export default {
       position: fixed;
       bottom: 60px;
       left: 0;
+      z-index: 90;
     }
     /* 底部 */
     .z-bottom-bar{
