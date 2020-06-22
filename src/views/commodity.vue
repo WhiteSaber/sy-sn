@@ -6,9 +6,6 @@
         </div>
         <div class="commodity-bottom">
             <div class="commodity-bottom-left">
-                <!-- <img src="../img/z13.png" alt="">
-                <img src="../img/z14.png" alt="">
-                <img src="../img/z15.png" alt=""> -->
                 <van-goods-action class="van-goods-action-list">
                     <van-goods-action-icon icon="chat-o" text="客服" @click="onClickIcon" />
                     <van-goods-action-icon icon="shop-o" text="店铺" @click="onClickIcon" />
@@ -20,8 +17,6 @@
                 </van-goods-action>
             </div>
             <div class="commodity-bottom-right">
-                <!-- <div class="commodity-bottom-right-one" is-link @click="showPopup">立刻购买</div>
-                <div class="commodity-bottom-right-two" is-link @click="showPopup">加入购物车</div> -->
                 <van-popup v-model="show" position="bottom" :style="{ height: '70%' }" closeable close-icon="close" round class="commodity-bottom-right-box">
                     <div v-if="appear==true">
                         <div class="commodity-bottom-right-top-list">
@@ -154,7 +149,8 @@ export default {
             window.location.href="https://passport.suning.com/ids/login?loginTheme=neworder&service=https%3A%2F%2Faq.suning.com%2Fasc%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fshopping.suning.com%252Fwapv2%252FnowBuy%252FquickBuy.do%253Fpagesrc%253Dhttps%25253A%25252F%25252Fm.suning.com%25252Fproduct%25252F0000000000%25252F000000011393934167.html%25253Fsafp%25253Df73ee1cf.wapindex7.113464229882.58%252526safc%25253Dprd.1.rec_25-56_25-56_352%25252COPA1%25252COPC1_sys%2525253Arec%25252Cinpo%2525253A0%25252Ccpn%2525253A0%25252Cp%2525253A14-41%25252Cuuid%2525253A817c2f40983b126d8594b65c56537189%25252Cd%2525253A1%25252Cab%2525253AH%25252Cdab%2525253A5-5_A%252526safpn%25253D10001%2526redirectFix%253Dcart2#/"
         },
         join(index){
-            console.log(this.contentList[index])
+            this.show = false;
+            Toast('添加购物车成功');
         },
         onClickIcon() {
             Toast('点击图标');
