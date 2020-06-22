@@ -31,23 +31,23 @@
     </div>
     <div class="z-bottom-bar">
       <div class="z-bottom-item" @click="itemChange(0)">
-        <img src="../img/房子白.png" alt />
+        <img src="../img/fangzi-w.png" alt />
         <div>首页</div>
       </div>
       <div class="z-bottom-item" @click="itemChange(1)">
-        <img src="../img/放大镜.png" alt />
+        <img src="../img/fangdajing.png" alt />
         <div style="color:rgb(255,204,0);">分类</div>
       </div>
       <div class="z-bottom-item" @click="itemChange(2)">
-        <img src="../img/清单白.png" alt />
+        <img src="../img/qingdan-w.png" alt />
         <div>必抢清单</div>
       </div>
       <div class="z-bottom-item" @click="itemChange(3)">
-        <img src="../img/购物车白.png" alt />
+        <img src="../img/gouwuche-w.png" alt />
         <div>购物车</div>
       </div>
       <div class="z-bottom-item" @click="itemChange(4)">
-        <img src="../img/易购白.png" alt />
+        <img src="../img/yigou-w.png" alt />
         <div>我的易购</div>
       </div>
     </div>
@@ -163,6 +163,7 @@ export default {
 .z-home .z-bottom-bar {
   flex-shrink: 0;
   display: flex;
+  padding:5px 0;
 }
 .z-bottom-item {
   width: 100%;
