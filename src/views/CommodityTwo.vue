@@ -210,7 +210,7 @@ export default {
         overflow: auto;
     }
     .commodity-details-list{
-        background-color: blueviolet;
+        background-color: rgb(24, 21, 27);
         height: 1500px;
     }
     /* 底部 */
