@@ -14,7 +14,7 @@
             <!-- 内容 - 上段 -->
             <div class="c-content-one">
                 <img src="../img/c-login-icon.png" alt="#" class="c-content-icon">
-                <span class="c-content-title">欢迎登录苏宁易购</span>
+                <div class="c-content-title">欢迎登录苏宁易购</div>
             </div>
             <!-- 账号密码登录版 -->
             <div v-if="flag==true">
@@ -144,7 +144,7 @@ export default {
     /* 头部 */
     .c-app-head{
         width: 100%;
-        font-size: 0.48rem;
+        font-size: 70%;
         display: flex;
         justify-content:flex-end;
         padding: 6.24px 11.52px;
@@ -168,22 +168,25 @@ export default {
     }
     /* 内容 - 上段 */
     .c-content-one{
+        width: 100%;     /* 新添加 */
         display: flex;
         align-items:center;
     }
     .c-content-icon{
-        width: 43.19px;
-        height: 43.19px;
+        width: 15%;
+        height: 15%;
         margin-right: 14.4px;
     }
     .c-content-title{
-        display: inline-block;
+        width: 100%;
+        height: 100%;
         color: #222;
-        font-size: 12px;
-        font-weight: 900;
+        font-size: 100%;
+        font-weight: 500;
     }
     /* 内容 - 中段 */
     .c-content-two{
+        width: 100%;
         position: relative;
     }
     /* 账号密码登录 */
@@ -240,7 +243,7 @@ export default {
         position: absolute;
         right: 79px;
         bottom: 10px;
-        /* display: none; */
+        display: none;
     }
     /* 验证码登录 */
     .c-content-two-icon3{
@@ -296,7 +299,8 @@ export default {
     .c-content-but{
         width: 100%;
         height: 43px;
-        font-weight: 700;
+        font-size: 100%;
+        font-weight: 900;
         background-color:#ffcc00;
         border-radius: 10px;
         border: none;
