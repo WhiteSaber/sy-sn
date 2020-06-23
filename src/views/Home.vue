@@ -3,7 +3,7 @@
     <!-- 顶部栏有消失和出现,开始是消失的 -->
     <div class="z-top-bar" v-if="scroll > 900">
       <img src="../img/sort.png" alt="" @click="topBarImg">
-      <div class="z-top-bar-item">
+      <div class="z-top-bar-item" @click="ZhomeSearch">
           <img src="../img/search.png" alt="">
           <div>爆款好货5折开抢</div>
       </div>
@@ -20,7 +20,7 @@
             <img src="../img/159237517720211281.gif" alt="" class="z-middle-bar-list-item-img-two">
             <img src="../img/login.png" alt="" @click="topSignIn">
           </div>
-          <div class="z-middle-bar-list-item-one">
+          <div class="z-middle-bar-list-item-one" @click="ZhomeSearch">
             <img src="../img/search.png" alt="">
             <div>爆款好货5折开抢</div>
           </div>
@@ -351,7 +351,9 @@
           <div class="z-moddle-goods-list-item" v-for="(item,index) in goodsListOne" :key="index"  @click="goodsItemOne">
             <img :src="item.img" class="z-moddle-goods-img">
             <p class="z-goods-content">{{item.name}}</p>
-            <P></P>
+            <div class="shop-box">
+              <P class="shop">自营</P>
+            </div>
             <div class="z-goods-price-item">
               <span class="z-goods-icon">￥</span>
               <span class="z-goods-price">{{item.price}}</span>
@@ -360,10 +362,12 @@
           </div>
         </div>
         <div class="z-moddle-goods-list-two">
-          <div class="z-moddle-goods-list-item" v-for="(item,index) in goodsListTwo" :key="index">
+          <div class="z-moddle-goods-list-item" v-for="(item,index) in goodsListTwo" :key="index" @click="goodsItemTwo">
             <img :src="item.img" class="z-moddle-goods-img">
             <p class="z-goods-content">{{item.name}}</p>
-            <P></P>
+            <div class="shop-box">
+              <P class="shop">自营</P>
+            </div>
             <div class="z-goods-price-item">
               <span class="z-goods-icon">￥</span>
               <span class="z-goods-price">{{item.price}}</span>
@@ -372,10 +376,22 @@
           </div>
         </div>
       </div>
+      <!-- 底部广告 -->
+      <img src="../img/z30.png" alt="" class="lowestLevel">
+      <a href="https://c.m.suning.com/channelwap.htm?appid=1&packnversion=182&channelcode=40156&wap_source=%E6%98%93%E8%B4%AD%E7%AB%99%E5%86%85wap%E9%A6%96%E9%A1%B5%E9%A1%B6%E9%83%A8%E4%B8%8B%E8%BD%BD%E5%A4%B4&wap_medium=40156&wap_content=&wap_term=&wap_campaign=&downflag=1" class="lowestLevelAdv">
+        <img src="../img/z29.jpg" alt="">
+      </a>
       <!-- 底部登录条 -->
-      <img src="../img/zSignIn.png" alt="" class="z-sign-in" @click="SignInChange">
+      <img src="../img/zSignIn.png" alt="" class="z-sign-in" @click="SignInChange" v-if="scroll < 4000 && loginBool == false">
     </div>
-
+    <!-- 右侧固定广告和回到顶部 -->
+    <a href="https://cuxiao.m.suning.com/scms/wapshouyexuanfu.html?safp=f73ee1cf.wapindex7.126116038188.1&safpn=10001">
+      <img src="../img/z31.png" alt="" class="RedEnvelopes">
+    </a>
+    <a href="https://c.m.suning.com/channelwap.htm?appid=1&packnversion=235&channelcode=40156&wap_source=%E6%98%93%E8%B4%AD%E7%AB%99%E5%86%85wap%E9%A6%96%E9%A1%B5%E9%A1%B6%E9%83%A8%E4%B8%8B%E8%BD%BD%E5%A4%B4&wap_medium=40156&wap_content=&wap_term=&wap_campaign=&downflag=1">
+      <img src="../img/z32.png" alt="" class="SNapp">
+    </a>
+    <img src="../img/z33.png" alt="" class="returnTopImg" @click="returnTop" v-if="scroll > 1400">
     <!-- 底部 -->
     <div class="z-bottom-bar">
         <div class="z-bottom-item" @click="itemChangeLiveHeart()" v-if="scroll<=900 && LiveHeart == 'false'">
@@ -421,6 +437,7 @@ export default {
   },
   data(){
     return {
+      loginBool: this.$store.state.loginBool,
       itemIndex:0,
       LiveHeart:"false", //猜你喜欢图标的出现和消失
       scroll: '' ,    //滚动条高度
@@ -634,6 +651,10 @@ export default {
         this.scroll = document.getElementById("zyr-middle-bar").scrollTop
         // console.log(this.scroll)
       },
+    // 回到顶部
+    returnTop(){
+      document.getElementById("zyr-middle-bar").scrollTop = 0
+    },
     //为您推荐频道跳转
     zRecommend(){
       window.location.href="https://c.m.suning.com/channelNSQ.html?safp=f73ee1cf.wapindex7.123114334595.1&safpn=10001"
@@ -696,6 +717,14 @@ export default {
               }
         });
       };
+      if(this.itemIndex == 4 && this.loginBool==true){
+          this.$router.push({
+            path:"/afterlogin",
+            query:{
+                  name:"afterlogin"
+                }
+          });
+        }
     },
     SignInChange(){
       this.$router.push({
@@ -711,6 +740,24 @@ export default {
         path:"/commodityOne",
         query:{
               name:"commodityOne"
+            }
+      });
+    },
+    // 商品详情点跳转第二页
+    goodsItemTwo(){
+      this.$router.push({
+        path:"/commodityTwo",
+        query:{
+              name:"commodityTwo"
+            }
+      });
+    },
+    // 搜索页面跳转
+    ZhomeSearch(){
+       this.$router.push({
+        path:"/commodityTwo",
+        query:{
+              name:"commodityTwo"
             }
       });
     }
@@ -1325,7 +1372,23 @@ export default {
       color: #999999;
       margin-left: 10px;
     }
-    
+    .shop-box{
+      width: 100%;
+      padding: 10px 143px 10px 8px;
+    }
+    .shop{
+      font-size: 12px;
+      background-color: #ffcc00;
+      font-weight: bold;
+      border-radius:3px ;
+      padding: 1px 5px;
+    }
+    .lowestLevel{
+      width: 100%;
+    }
+    .lowestLevelAdv img{
+      width: 100%;
+    }
     /* 底部登录条 */
     .z-sign-in{
       height: 6%;
@@ -1362,5 +1425,40 @@ export default {
       color: #666666;
       flex-direction: column;
       justify-content: center;
+    }
+    /* 右侧固定广告和回到顶部 */
+    .RedEnvelopes{
+      position: fixed;
+      height: 7%;
+      width: 13%;
+      top: 450px;
+      right: 5px;
+    }
+    .SNapp{
+      position: fixed;
+      height: 9.8%;
+      width: 13.5%;
+      top: 540px;
+      right: 5px;
+    }
+    .returnTop{
+      /* position: fixed;
+      height: 5%;
+      width: 10%;
+      top: 630px;
+      right: 5px; */
+      border-radius:15px;
+      padding: 10px;
+    }
+    .returnTopImg{
+      position: fixed;
+      height: 5%;
+      width: 10%;
+      top: 640px;
+      right: 10px;
+      border-radius:50%;
+      background-color: #fff;
+      padding: 8px;
+      box-shadow: 1px 1px 10px rgba(0,0,0,0.3)
     }
 </style>
