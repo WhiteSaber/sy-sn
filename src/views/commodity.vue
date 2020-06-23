@@ -50,7 +50,7 @@
                         </div>
                         <div class="commodity-bottom-right-bottom-item">
                             <div class="commodity-bottom-right-bottom-item-one" @click="atOnec">立刻购买</div>
-                            <div class="commodity-bottom-right-bottom-item-two" @click="join(0)">加入购物车</div>
+                            <div class="commodity-bottom-right-bottom-item-two" @click="joinOne(0)">加入购物车</div>
                         </div>
                     </div>
 
@@ -86,7 +86,7 @@
                         </div>
                         <div class="commodity-bottom-right-bottom-item">
                             <div class="commodity-bottom-right-bottom-item-one" @click="atOnec">马上抢</div>
-                            <div role="button" tabindex="0"  class="commodity-bottom-right-bottom-item-two" @click="join(1)">加入购物车</div>
+                            <div  class="commodity-bottom-right-bottom-item-two" @click="joinTwo()">加入购物车</div>
                         </div>
                     </div>
                 </van-popup>
@@ -101,6 +101,7 @@ import { Toast } from 'vant';
 export default {
     data() {
         return {
+            num:0,
             appear:true,
             value: 1,
             show: false,
@@ -113,7 +114,8 @@ export default {
                     title:"LANEIGE兰芝 雪纱丝柔隔离#绿色 30ml/瓶 SPF25 PA++ 提亮遮瑕 粉底/遮瑕防晒隔离",
                     number:1,
                     checked:false,
-                    color:"绿色"
+                    color:"绿色",
+                    name:"苏宁自营"
                 },
                 {
                     imgBig:require("../img/z18.jpg"),
@@ -123,7 +125,8 @@ export default {
                     title:"【改善暗沉】兰芝雪纱丝柔修颜隔离霜#No.20 柔粉 30ml SPF25 PA++防晒隔离",
                     number:1,
                     checked:false,
-                    color:"柔粉"
+                    color:"柔粉",
+                    name:"苏宁自营"
                 }
             ]
         };
@@ -134,10 +137,10 @@ export default {
         this.show = true;
         },
         plus(index){
-            this.contentList[index].number++
+            this.num++
         },
         minus(index){
-            this.contentList[index].number--
+            this.num--
         },
         colorTwo(){
             this.appear = false
@@ -148,9 +151,39 @@ export default {
         atOnec(){
             window.location.href="https://passport.suning.com/ids/login?loginTheme=neworder&service=https%3A%2F%2Faq.suning.com%2Fasc%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fshopping.suning.com%252Fwapv2%252FnowBuy%252FquickBuy.do%253Fpagesrc%253Dhttps%25253A%25252F%25252Fm.suning.com%25252Fproduct%25252F0000000000%25252F000000011393934167.html%25253Fsafp%25253Df73ee1cf.wapindex7.113464229882.58%252526safc%25253Dprd.1.rec_25-56_25-56_352%25252COPA1%25252COPC1_sys%2525253Arec%25252Cinpo%2525253A0%25252Ccpn%2525253A0%25252Cp%2525253A14-41%25252Cuuid%2525253A817c2f40983b126d8594b65c56537189%25252Cd%2525253A1%25252Cab%2525253AH%25252Cdab%2525253A5-5_A%252526safpn%25253D10001%2526redirectFix%253Dcart2#/"
         },
-        join(index){
+
+        // 商品添加
+        joinOne(index){
             this.show = false;
             Toast('添加购物车成功');
+            this.$store.commit("addOne",{
+                imgBig:require("../img/z16.jpg"),
+                imgSmall:require("../img/z17.jpg"),
+                parce:129,
+                code:10597996078,
+                title:"LANEIGE兰芝 雪纱丝柔隔离#绿色 30ml/瓶 SPF25 PA++ 提亮遮瑕 粉底/遮瑕防晒隔离",
+                number:1+this.num,
+                checked:false,
+                color:"绿色",
+                name:"苏宁自营"
+            })
+            console.log(this.$store.state.productDetails)
+        },
+        joinTwo(index){
+            this.show = false;
+            Toast('添加购物车成功');
+            this.$store.commit("addTwo",{
+                imgBig:require("../img/z18.jpg"),
+                    imgSmall:require("../img/z19.jpg"),
+                    parce:149,
+                    code:11393934167,
+                    title:"【改善暗沉】兰芝雪纱丝柔修颜隔离霜#No.20 柔粉 30ml SPF25 PA++防晒隔离",
+                    number:1+this.num,
+                    checked:false,
+                    color:"柔粉",
+                    name:"苏宁自营"
+            })
+            console.log(this.$store.state.productDetails)
         },
         onClickIcon() {
             Toast('点击图标');
