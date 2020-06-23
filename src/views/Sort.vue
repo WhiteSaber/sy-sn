@@ -55,10 +55,10 @@
 </template>
 
 <script>
-import rementuijianVue from '../components/rementuijian.vue';
-import shoujishumaVue from '../components/shoujishuma.vue';
-import dajiadianVue from '../components/dajiadian.vue';
-import other from '../components/lue.vue';
+import rementuijianVue from '../components/ReMenTuiJian.vue';
+import shoujishumaVue from '../components/ShouJiShuMa.vue';
+import dajiadianVue from '../components/DaJiaDian.vue';
+import other from '../components/Lue.vue';
 export default {
   data() {
     return { 
