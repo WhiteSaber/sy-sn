@@ -28,7 +28,12 @@
                               <input type="checkbox" >
                               <span class="check-box-2"></span>
                           </span>
+                          <div class="shop">
+                              <img src="../assets/ssuningziying.png">
+                              <span class="shop-name">{{item.name}}</span>
+                          </div>
                       </div>
+
                       <div class="item-content">
                           <div class="button-box">
                               <span class="item-box check-checked" v-if="item.checked==true" @click="checkItem(index)">
@@ -40,9 +45,22 @@
                                   <span class="item-box-2"></span>
                               </span>
                           </div>
-                          
+                          <img :src="item.imgBig">
+
+                          <div class="item-detail">
+                            <p>{{item.title}}</p>
+                            <div class="item-size">{{item.color}}</div>
+                            <div class="item-youhui"></div>
+                            <div class="item-bottom">
+                              <div>￥{{item.price}}</div>
+                              <div class="counter">
+                                <button class="plusBtn" @click="plusNum(index)"></button>
+                                <input :value="item.number">
+                                <button class="addBtn" @click="addNum(index)"></button>
+                              </div>
+                            </div>
+                          </div>
                       </div>
-                      <div>{{item.price}}</div>
                   </div>
 
                   
@@ -137,7 +155,7 @@ export default {
       return {
         itemIndex:0,
         list:[],
-        allPrice:0.00,
+        
         allChecked:false,
         goodsListOne:[
           {
@@ -234,20 +252,6 @@ export default {
             price:608
           },
         ],
-
-        shoppingCartList:
-        [
-          {
-            name:"商品A",
-            price:10,
-            checked:false
-          },
-          {
-            name:"商品B",
-            price:20,
-            checked:false
-          },
-        ]
       }
     },
     methods:{
@@ -297,6 +301,29 @@ export default {
             });
           }
       },
+      
+      plusNum(index)
+      {
+        if(this.list.indexOf(this.shoppingCartList[index])!==-1)
+        {
+          this.list[this.list.indexOf(this.shoppingCartList[index])].number--;
+          if(this.list[this.list.indexOf(this.shoppingCartList[index])].number==1)
+          {
+            this.list.splice(this.list[this.list.indexOf(this.shoppingCartList[index])],1);
+          }
+        }
+        this.add();
+      },
+
+      addNum(index)
+      {
+        if(this.list.indexOf(this.shoppingCartList[index])!==-1)
+        {
+          this.list[this.list.indexOf(this.shoppingCartList[index])].number++;
+        };
+        this.add()
+      },
+      
       checkItem(index)
       {
         this.shoppingCartList[index].checked=!this.shoppingCartList[index].checked;
@@ -344,12 +371,22 @@ export default {
       {
         return this.$store.state.loginBool;
       },
+      shoppingCartList()
+      {
+        return this.$store.state.productDetails;
+      },
+      allPrice()
+      {
+        for(let i=0;i<this.list.length;i++)
+        {
+          this.allPrice+=(this.list[i].price*this.list[i].number);
+        }
+      }
     },
     watch:
     {
       list()
       {
-        this.allPrice=0.00;
         if(this.list.length==this.shoppingCartList.length)
         {
           this.allChecked=true;
@@ -357,10 +394,6 @@ export default {
         else
         {
           this.allChecked=false;
-        }
-        for(let i=0;i<this.list.length;i++)
-        {
-          this.allPrice+=this.list[i].price;
         }
       },
     }
@@ -478,7 +511,7 @@ export default {
     .item
     {
       width:100%;
-      height:300px;
+      height:auto;
       background-color: #fff;
       border-radius: 6px;
       margin-bottom:12px;
@@ -489,24 +522,147 @@ export default {
       padding:12px 12px 9px 0;
       width:100%;
       height:auto;
+      display:flex;
+    }
+
+    .shop
+    {
+      height:20px;
+      display:flex;
+      flex-direction: row;
+    }
+
+    .shop-name
+    {
+      font-size: 13px;
+      color:#333;
+      flex-grow: 1;
+    }
+
+    .shop img
+    {
+      width:20px;
+      height:20px;
+      margin-right:5px;
     }
 
     .item-content
     {
       width:100%;
       height:141px;
-      border:1px dotted black;
       padding-right:12px;
       padding-bottom:15px;
+      display:flex;
+      flex-direction: row;
+    }
+
+    .item-content img
+    {
+      width:90px;
+      height:90px;
     }
 
     .button-box
     {
       width:8%;
       height:90px;
-      border:1px solid black;
       display:flex;
       justify-content: center;
+    }
+
+    .item-detail
+    {
+      padding-left:10px;
+      width:71%;
+      height:113px;
+      display:flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-top:3px;
+      padding-bottom:10px;
+    }
+
+    .item-detail p
+    {
+      height: 36px;
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      word-break:break-all;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      font-size:12px;
+      font-weight: 700;
+    }
+
+    .item-size
+    {
+      display:inline-block;
+      width:30px;
+      height:16px;
+      background:#f2f2f2;
+      font-size:12px;
+      color:#333;
+    }
+
+    .item-youhui
+    {
+      height:15px;
+    }
+
+    .item-bottom
+    {
+      width:100%;
+      height:27px;
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .counter
+    {
+      width:42%;
+      height:27px;
+      padding:3px;
+      background:url("../assets/scounter.png");
+      background-size: 100%;
+      display:flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+
+    .plusBtn,.addBtn
+    {
+      display:block;
+      width:21px;
+      height:21px;
+      background:#f2f2f2;
+      border-radius: 21px;
+      border:none;
+    }
+
+    .plusBtn
+    {
+      background: url("../assets/splusbtn.png");
+      background-size: 100%;
+    }
+
+    .addBtn
+    {
+      background: url("../assets/saddbtn.png");
+      background-size: 100%;
+    }
+
+    .counter input
+    {
+      display:block;
+      width:42px;
+      height:13px;
+      background:#ffffff;
+      margin:6.25% 0;
+      text-align: center;
+      border:none;
+      font-size: 12px;
     }
 
     .item-box
@@ -516,7 +672,7 @@ export default {
       vertical-align: middle;
       width:18px;
       height:18px;
-      margin:0 6px;
+      margin:35px 0;
     }
 
     .item-box input
