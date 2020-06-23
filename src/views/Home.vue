@@ -708,9 +708,9 @@ export default {
     // 商品详情点跳转第一页
     goodsItemOne(){
       this.$router.push({
-        path:"/commodity",
+        path:"/commodityOne",
         query:{
-              name:"commodity"
+              name:"commodityOne"
             }
       });
     }

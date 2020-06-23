@@ -31,8 +31,8 @@ Vue.use(VueRouter)
     component: () => import('../views/search.vue')
   },
   {
-    path:'/commodity',
-    component: () => import('../views/commodity.vue')
+    path:'/commodityOne',
+    component: () => import('../views/CommodityOne.vue')
   },
   // {
   //   path: '/about',
