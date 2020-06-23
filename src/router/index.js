@@ -24,11 +24,11 @@ Vue.use(VueRouter)
   },
   {
     path:'/afterlogin',
-    component: () => import('../views/afterlogin.vue')
+    component: () => import('../views/AfterLogin.vue')
   },
   {
     path:'/search',
-    component: () => import('../views/search.vue')
+    component: () => import('../views/Search.vue')
   },
   {
     path:'/commodityOne',

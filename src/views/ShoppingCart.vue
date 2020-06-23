@@ -29,7 +29,19 @@
                               <span class="check-box-2"></span>
                           </span>
                       </div>
-                      <div class="item-content">{{item.name}}</div>
+                      <div class="item-content">
+                          <div class="button-box">
+                              <span class="item-box check-checked" v-if="item.checked==true" @click="checkItem(index)">
+                                  <input type="checkbox">
+                                  <span class="item-box-2"></span>
+                              </span>
+                              <span class="item-box" v-else @click="checkItem(index)">
+                                  <input type="checkbox" >
+                                  <span class="item-box-2"></span>
+                              </span>
+                          </div>
+                          
+                      </div>
                       <div>{{item.price}}</div>
                   </div>
 
@@ -444,6 +456,7 @@ export default {
     {
       width:100%;
       height:18px;
+      line-height: 18px;
       font-size: 12px;
       color:#222;
     }
@@ -481,8 +494,53 @@ export default {
     .item-content
     {
       width:100%;
-      height:50px;
+      height:141px;
       border:1px dotted black;
+      padding-right:12px;
+      padding-bottom:15px;
+    }
+
+    .button-box
+    {
+      width:8%;
+      height:90px;
+      border:1px solid black;
+      display:flex;
+      justify-content: center;
+    }
+
+    .item-box
+    {
+      position:relative;
+      display:inline-block;
+      vertical-align: middle;
+      width:18px;
+      height:18px;
+      margin:0 6px;
+    }
+
+    .item-box input
+    {
+      display:inline-block;
+      position:absolute;
+      top:0;
+      left:0;
+      width:18px;
+      height:18px;
+      margin:0 auto;
+      opacity:0;
+      
+    }
+
+    .item-box-2
+    {
+      position:absolute;
+      width:18px;
+      height:18px;
+      border:1px solid #ccc;
+      border-radius: 50%;
+      top:0;
+      left:0;
     }
 
     .check-box
