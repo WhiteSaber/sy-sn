@@ -155,7 +155,7 @@ export default {
       return {
         itemIndex:0,
         list:[],
-        
+        allPrice:0.00,
         allChecked:false,
         goodsListOne:[
           {
@@ -306,13 +306,12 @@ export default {
       {
         if(this.list.indexOf(this.shoppingCartList[index])!==-1)
         {
-          this.list[this.list.indexOf(this.shoppingCartList[index])].number--;
-          if(this.list[this.list.indexOf(this.shoppingCartList[index])].number==1)
+          if(this.list[this.list.indexOf(this.shoppingCartList[index])].number!==1)
           {
-            this.list.splice(this.list[this.list.indexOf(this.shoppingCartList[index])],1);
+            this.list[this.list.indexOf(this.shoppingCartList[index])].number--;
           }
         }
-        this.add();
+        this.pay();
       },
 
       addNum(index)
@@ -321,7 +320,7 @@ export default {
         {
           this.list[this.list.indexOf(this.shoppingCartList[index])].number++;
         };
-        this.add()
+        this.pay();
       },
       
       checkItem(index)
@@ -363,6 +362,14 @@ export default {
           }
         }
         this.add();
+      },
+      pay()
+      {
+        this.allPrice=0.00;
+        for(let i=0;i<this.list.length;i++)
+        {
+          this.allPrice+=(this.list[i].price*this.list[i].number);
+        }
       }
     },
     computed:
@@ -375,18 +382,12 @@ export default {
       {
         return this.$store.state.productDetails;
       },
-      allPrice()
-      {
-        for(let i=0;i<this.list.length;i++)
-        {
-          this.allPrice+=(this.list[i].price*this.list[i].number);
-        }
-      }
     },
     watch:
     {
       list()
       {
+        this.allPrice=0.00;
         if(this.list.length==this.shoppingCartList.length)
         {
           this.allChecked=true;
@@ -394,6 +395,10 @@ export default {
         else
         {
           this.allChecked=false;
+        }
+        for(let i=0;i<this.list.length;i++)
+        {
+          this.allPrice+=(this.list[i].price*this.list[i].number);
         }
       },
     }
