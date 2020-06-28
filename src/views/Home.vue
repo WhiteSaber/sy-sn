@@ -62,7 +62,18 @@
       <!-- 苏宁秒杀 -->
       <div class="z-middle-setkill">
         <div class="z-middle-setkill-item">
-          <p class="z-middle-setkill-span-one">天天低价</p>
+          <div style="display:flex">
+            <span class="z-middle-setkill-span-one" style="color:#222222;font-size:14px">天天低价</span>
+            <van-count-down :time="time" style="margin-left:10px">
+              <template v-slot="timeData">
+                <span class="block">{{ timeData.hours }}</span>
+                <span class="colon">:</span>
+                <span class="block">{{ timeData.minutes }}</span>
+                <span class="colon">:</span>
+                <span class="block">{{ timeData.seconds }}</span>
+              </template>
+            </van-count-down>
+          </div>
           <p class="z-middle-setkill-span-two">人气好货限时抢</p>
           <div class="z-middle-setkill-item-content">
             <div>
@@ -352,7 +363,7 @@
             <img :src="item.img" class="z-moddle-goods-img">
             <p class="z-goods-content">{{item.name}}</p>
             <div class="shop-box">
-              <P class="shop">自营</P>
+              <span class="shop">自营</span>
             </div>
             <div class="z-goods-price-item">
               <span class="z-goods-icon">￥</span>
@@ -364,9 +375,9 @@
         <div class="z-moddle-goods-list-two">
           <div class="z-moddle-goods-list-item" v-for="(item,index) in goodsListTwo" :key="index" @click="goodsItemTwo">
             <img :src="item.img" class="z-moddle-goods-img">
-            <p class="z-goods-content">{{item.name}}</p>
+            <span class="z-goods-content">{{item.name}}</span>
             <div class="shop-box">
-              <P class="shop">自营</P>
+              <span class="shop">自营</span>
             </div>
             <div class="z-goods-price-item">
               <span class="z-goods-icon">￥</span>
@@ -441,6 +452,7 @@ export default {
       itemIndex:0,
       LiveHeart:"false", //猜你喜欢图标的出现和消失
       scroll: '' ,    //滚动条高度
+      time: 3000 * 60 * 60 * 1000, //秒杀
       // 轮播图第一次
       swiperOptions: {
         loop:true,
@@ -542,9 +554,9 @@ export default {
       // 商品数据
       goodsListOne:[
         {
-          name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
-          img:require("../img/headset.png"),
-          price:608
+          name:"Laneige兰芝雪纱丝柔隔离#紫色粉底/遮瑕防晒隔离",
+          img:require("../img/z80.jpg"),
+          price:149
           
         },
         {
@@ -590,9 +602,9 @@ export default {
       ],
       goodsListTwo:[
         {
-          name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
-          img:require("../img/headset.png"),
-          price:608
+          name:"法国大宝Embryolisse妆前乳 隔离霜打底乳补水保湿霜粉底/遮瑕巴黎草莓蓝",
+          img:require("../img/z79.jpg"),
+          price:305
         },
         {
           name:"新品Apple二代新款AirPods(配有线充电盒) 入耳式无线蓝牙耳机 MV7N2CH/A",
@@ -754,10 +766,10 @@ export default {
     },
     // 搜索页面跳转
     ZhomeSearch(){
-       this.$router.push({
-        path:"/commodityTwo",
+      this.$router.push({
+        path:"/search",
         query:{
-              name:"commodityTwo"
+              name:"search"
             }
       });
     }
@@ -957,6 +969,24 @@ export default {
       width: 100%;
     }
     /* 苏宁秒杀 */
+    .z-home .colon {
+      display: inline-block;
+      color: #333;
+      padding: 0;
+    }
+    .z-home .block {
+      display: inline-block;
+      padding: 3px 5px 0px 5px;
+      /* width: 15px; */
+      border-radius: 4px;
+      color: #333;
+      font-weight: bold;
+      font-size: 12px;
+      /* height: 15px; */
+      text-align: center;
+      line-height: 15px;
+      background-color: #ffcc00;
+    }
     .z-middle-setkill{
       width: 100%;
       display: flex;
@@ -1333,14 +1363,14 @@ export default {
       display: flex;
       flex-direction: column;
       align-items: center;
-      flex-shrink: 0;
+      /* flex-shrink: 0; */
       background-color: #fff;
       margin-top: 10px;
     }
 
     .z-moddle-goods-img{
-      width: 90%;
-      height: 90%;
+      width: 100%;
+      /* height: 90%; */
       flex-shrink: 0;
     }
     .z-goods-content{
