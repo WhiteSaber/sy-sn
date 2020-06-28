@@ -408,7 +408,7 @@
                 <van-goods-action class="van-goods-action-list">
                     <van-goods-action-icon icon="chat-o" text="客服" @click="onClickIcon" />
                     <van-goods-action-icon icon="shop-o" text="店铺" @click="onClickIcon" />
-                    <van-goods-action-icon icon="cart-o" text="购物车" @click="onClickIcon" :badge="nums"/>
+                    <van-goods-action-icon icon="cart-o" text="购物车" @click="onClickIcon" badge=""/>
                     <div class="van-goods-action-box">
                         <div class="commodity-bottom-right-one" is-link @click="showPopup">立刻购买</div>
                         <div class="commodity-bottom-right-two" is-link @click="showPopup">加入购物车</div>
@@ -500,7 +500,7 @@ import { Toast } from 'vant';
 export default {
     data() {
         return {
-            nums:"",
+            nums:0,
             active: 0,
             loop:false,
             current: 0,
@@ -678,22 +678,7 @@ export default {
         atOnec(){
             window.location.href="https://passport.suning.com/ids/login?loginTheme=neworder&service=https%3A%2F%2Faq.suning.com%2Fasc%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fshopping.suning.com%252Fwapv2%252FnowBuy%252FquickBuy.do%253Fpagesrc%253Dhttps%25253A%25252F%25252Fm.suning.com%25252Fproduct%25252F0000000000%25252F000000011393934167.html%25253Fsafp%25253Df73ee1cf.wapindex7.113464229882.58%252526safc%25253Dprd.1.rec_25-56_25-56_352%25252COPA1%25252COPC1_sys%2525253Arec%25252Cinpo%2525253A0%25252Ccpn%2525253A0%25252Cp%2525253A14-41%25252Cuuid%2525253A817c2f40983b126d8594b65c56537189%25252Cd%2525253A1%25252Cab%2525253AH%25252Cdab%2525253A5-5_A%252526safpn%25253D10001%2526redirectFix%253Dcart2#/"
         },
-        // 顶部导航栏
-        // Zmenu() {
-        //     this.commodityScroll = document.getElementById("zyr-commodity-list").scrollTop
-        //     console.log(this.commodityScroll)
-        //     if(this.commodityScroll >50){
-        //         this.topImgStyle.background = "#fff";
-        //         this.topImgStyle.position= "fixed";
-        //         this.topImgStyle.top= 0;
-        //         this.topTitleStyle.color="#222222"
-        //     }else{
-        //         this.topImgStyle.background = "";
-        //         this.topImgStyle.position= "";
-        //         this.topImgStyle.top= "";
-        //         this.topTitleStyle.color="#fff"
-        //     }
-        // },
+        
         // 商品添加
         joinOne(index){
             this.show = false;
@@ -769,8 +754,13 @@ export default {
         },
         // 回到最顶部
         commodityTop(){
-            document.body.scrollTop = 0
-        }
+            document.documentElement.scrollTop = 0
+        },
+        // numbera(){
+        //     for(let i = 0 ; i<this.$store.state.productDetails.length ; i++){
+        //         that.nums += this.$store.state.productDetails[i].number
+        //     }
+        // }
     },
     mounted() {
         let that = this
@@ -788,10 +778,7 @@ export default {
                 that.topImgStyle.top= "";
                 that.topTitleStyle.color="#fff"
             }
-        })
-        for(let i = 0 ; i<this.$store.state.productDetails.length ; i++){
-            that.nums += this.$store.state.productDetails[i].number
-        }
+        });
     },
 }
 </script>
