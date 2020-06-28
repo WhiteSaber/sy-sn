@@ -546,7 +546,7 @@ export default {
                     title:"【法国大宝】Embryolisse 保湿隔离妆前乳「深蓝色」75毫升 粉底/遮瑕 适合油性混合性肌肤",
                     number:1,
                     checked:false,
-                    color:"深蓝色30毫升",
+                    color:"深蓝色75毫升",
                     name:"苏宁自营"
                 }
             ],
@@ -699,14 +699,14 @@ export default {
             this.show = false;
             Toast('添加购物车成功');
             this.$store.commit("addOne",{
-                imgBig:require("../img/z16.jpg"),
-                imgSmall:require("../img/z17.jpg"),
-                parce:129,
-                code:10597996078,
-                title:"LANEIGE兰芝 雪纱丝柔隔离#绿色 30ml/瓶 SPF25 PA++ 提亮遮瑕 粉底/遮瑕防晒隔离",
+                imgBig:require("../img/z108.jpg"),
+                imgSmall:require("../img/z109.jpg"),
+                parce:65,
+                code:11761530598,
+                title:"【保税仓发货】Embryolisse 保湿妆前隔离霜「深蓝色」30毫升 法国大宝 粉底/遮瑕 适合油性混合性肌肤",
                 number:1+this.num,
                 checked:false,
-                color:"绿色",
+                color:"深蓝色30毫升",
                 name:"苏宁自营"
             })
             // console.log(this.$store.state.productDetails)
@@ -715,14 +715,14 @@ export default {
             this.show = false;
             Toast('添加购物车成功');
             this.$store.commit("addTwo",{
-                imgBig:require("../img/z18.jpg"),
-                    imgSmall:require("../img/z19.jpg"),
-                    parce:149,
-                    code:11393934167,
-                    title:"【改善暗沉】兰芝雪纱丝柔修颜隔离霜#No.20 柔粉 30ml SPF25 PA++防晒隔离",
+                imgBig:require("../img/z110.jpg"),
+                    imgSmall:require("../img/z111.jpg"),
+                    parce:99,
+                    code:11761522704,
+                    title:"【法国大宝】Embryolisse 保湿隔离妆前乳「深蓝色」75毫升 粉底/遮瑕 适合油性混合性肌肤",
                     number:1+this.num,
                     checked:false,
-                    color:"柔粉",
+                    color:"深蓝色75毫升",
                     name:"苏宁自营"
             })
             console.log(this.$store.state.productDetails)
@@ -789,9 +789,9 @@ export default {
                 that.topTitleStyle.color="#fff"
             }
         })
-        for(let i = 0 ; i<this.$store.state.productDetails.length ; i++){
-            that.nums += this.$store.state.productDetails[i].number
-        }
+        // for(let i = 0 ; i<this.$store.state.productDetails.length ; i++){
+        //     that.nums += this.$store.state.productDetails[i].number
+        // }
     },
 }
 </script>
